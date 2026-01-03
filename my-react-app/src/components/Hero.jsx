@@ -1,19 +1,34 @@
+import React from "react";
+
 function Hero() {
   return (
     <section style={styles.hero}>
-      {/* Background shapes */}
-      <div style={styles.shapeOne}></div>
-      <div style={styles.shapeTwo}></div>
+      {/* Background doodles / educational outlines */}
+      <div style={styles.shapeOne}>
+        <svg width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="rgba(251,191,36,0.2)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+          <path d="M4 4.5A2.5 2.5 0 0 1 6.5 7H20" />
+          <path d="M20 7v10" />
+        </svg>
+      </div>
+
+      <div style={styles.shapeTwo}>
+        <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(56,189,248,0.15)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 2L12 22" />
+          <path d="M6 12H18" />
+        </svg>
+      </div>
 
       <div style={styles.content}>
         <h1 style={styles.title}>
-              Learn Skills 
+          Learn Skills <br />
           That Shape Your Future
         </h1>
 
         <p style={styles.subtitle}>
-          SkillForge is a modern digital learning platform designed to help
-          students and professionals build real-world skills using technology.
+          SkillForge is a modern digital learning platform helping students and professionals
+          gain real-world skills with interactive courses and projects.
         </p>
 
         <div style={styles.buttons}>
@@ -29,7 +44,7 @@ const styles = {
   hero: {
     position: "relative",
     height: "100vh",
-    background: "linear-gradient(135deg, #1e3a8a, #312e81)", // lighter than navbar
+    background: "linear-gradient(135deg, #eef2ff, #dbeafe)", // light & inviting
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -37,46 +52,41 @@ const styles = {
     overflow: "hidden",
   },
 
-  /* Subtle background shapes */
+  /* Doodle shapes */
   shapeOne: {
     position: "absolute",
-    width: "320px",
-    height: "320px",
-    background: "rgba(99, 102, 241, 0.25)",
-    borderRadius: "50%",
-    top: "-80px",
-    left: "-80px",
-    filter: "blur(80px)",
+    top: "-40px",
+    left: "-40px",
+    zIndex: 0,
+    filter: "blur(25px)",
   },
   shapeTwo: {
     position: "absolute",
-    width: "280px",
-    height: "280px",
-    background: "rgba(56, 189, 248, 0.18)",
-    borderRadius: "50%",
-    bottom: "-60px",
-    right: "-60px",
-    filter: "blur(90px)",
+    bottom: "-50px",
+    right: "-50px",
+    zIndex: 0,
+    filter: "blur(30px)",
   },
 
   content: {
     maxWidth: "800px",
     textAlign: "center",
-    color: "#ffffff",
+    color: "#1e293b",
     position: "relative",
     zIndex: 1,
   },
 
   title: {
-    fontSize: "3.2rem",
+    fontSize: "3rem",
     fontWeight: "bold",
     marginBottom: "20px",
     lineHeight: "1.2",
+    color: "#111827",
   },
 
   subtitle: {
-    fontSize: "1.1rem",
-    color: "#e0e7ff",
+    fontSize: "1.2rem",
+    color: "#334155",
     marginBottom: "40px",
   },
 
@@ -96,16 +106,18 @@ const styles = {
     color: "#111827",
     cursor: "pointer",
     fontWeight: "bold",
+    transition: "0.2s all",
   },
 
   secondaryBtn: {
     padding: "14px 30px",
     fontSize: "1rem",
     borderRadius: "8px",
-    border: "1px solid rgba(255,255,255,0.6)",
+    border: "1px solid #e2e8f0",
     backgroundColor: "transparent",
-    color: "#ffffff",
+    color: "#1e293b",
     cursor: "pointer",
+    transition: "0.2s all",
   },
 };
 
