@@ -1,0 +1,72 @@
+/* styling for footer */    
+
+.footer{
+    background-color: #0f172a;
+    color: #e5e7eb;
+    padding: 50px 20px 20px;
+    margin-top: 80px;
+}
+    
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+    
+.column {
+    line-height: 1.7;
+}
+
+.logo{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.description{
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+    
+.heading{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+    
+.list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+    
+.contact{
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+.socials{
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.icon{
+    transition: transform 0.2s;
+}
+    
+.bottom{
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 1px solid #334155;
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+    

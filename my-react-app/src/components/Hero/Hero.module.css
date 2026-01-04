@@ -1,0 +1,80 @@
+
+.hero{
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(135deg, #eef2ff, #dbeafe);  /*light & inviting */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+
+  /* Doodle shapes */
+.shapeOne{
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    z-index: 0;
+    filter: blur(25px);
+  }
+
+.shapeTwo{
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    z-index: 0;
+    filter: blur(30px);
+  }
+
+.content{
+    max-width: 800px;
+    text-align: center;
+    color: #1e293b;
+    position: relative;
+    z-index: 1;
+  }
+
+.title{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #111827;
+  }
+
+.subtitle{
+    font-size: 1.2rem;
+    color: #334155;
+    margin-bottom: 40px;
+  }
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+.primaryBtn{
+    padding: 14px 30px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #fbbf24;
+    color: #111827;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s all;
+  }
+
+.secondaryBtn{
+    padding: 14px 30px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background-color: transparent;
+    color: #1e293b;
+    cursor: pointer;
+    transition: 0.2s all;
+  }

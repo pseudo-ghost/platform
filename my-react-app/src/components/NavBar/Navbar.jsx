@@ -1,4 +1,5 @@
 import React from "react";
+/*import styles from "./Navbar.module.css"*/
 
 function Navbar() {
   const menuItems = ["Home", "About Us", "Explore", "Pricing", "Team", "Contact"];

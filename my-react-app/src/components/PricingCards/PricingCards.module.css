@@ -1,0 +1,115 @@
+
+
+.section{
+    padding:80px 20px;
+    background: #0d1b2a; 
+    text-align: center; 
+    font-family: 'Inter', sans-serif; 
+}
+
+.heading{
+    color: #fff; 
+    font-size: 2.5rem; 
+    margin-bottom: 10px;
+}
+   
+.toggleContainer{ 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px; 
+    margin-bottom:40px;
+}
+    
+.switch{
+      width:60px; 
+      height:30px;
+      background:rgba(255,255,255,0.1);
+      border-radius:20px;
+      position:relative;
+      cursor:pointer;
+      border:1px solid rgba(255,255,255,0.2);
+    }
+
+.knob{
+      width:24px;
+      height:24px; 
+      background:#ffb703;
+      border-radius:50%;
+      position:absolute;
+      top:2px; 
+      left: 4px;
+      transition: all 0.3s ease;    
+    }
+
+.knobActive {
+  left: 32px;
+}
+   
+.wrapper{ 
+    display:flex;
+    justify-content:center;
+    gap:25px; 
+    flex-wrap:wrap;
+}
+    
+.card{
+      background:rgba(255, 255, 255, 0.03);
+      backdrop-filter:blur(15px);
+      border-radius:24px;
+      padding: 40px;
+      width: 280px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      text-align: left;
+      position: relative;
+    }
+
+.popularCard{ 
+    border-color: #ffb703; 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 30px rgba(255, 183, 3, 0.2);
+}
+
+/* ANIMATIONSSS */
+.card:hover {
+  transform: translateY(-15px);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+
+.popularCard:hover {
+  transform: scale(1.05) translateY(-15px);
+}
+    
+badge{
+      position: absolute;
+      top: -15px;
+      right: 20px;
+      background: #ffb703;
+      color: #0d1b2a;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: bold;
+}
+    
+price{ 
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffb703;
+    margin: 20px 0;
+}
+    
+
+btn{ 
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: #ffb703;
+    color: #0d1b2a;
+    font-weight: bold;
+    cursor: pointer;
+}
+  

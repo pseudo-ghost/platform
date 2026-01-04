@@ -1,0 +1,29 @@
+
+.section{
+    padding: 60px 20px;
+    background-color: #f3f4f6;
+    text-align: center;
+}
+
+.heading{
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.member_mapping{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+ 
+.member_key_mapping{
+    text-align: center;
+}
+
+.image{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from './ScrollProgress.module.css';
 
 function ScrollProgress() {
   const [scrollWidth, setScrollWidth] = useState(0);
@@ -16,27 +17,27 @@ function ScrollProgress() {
   }, []);
 
   return (
-    <div style={styles.container}>
-      <div style={{ ...styles.progressBar, width: `${scrollWidth}%` }} />
+    <div className={styles.container}>
+      <div className={'${styles.progressBar} width: `${scrollWidth}%` }'} />
     </div>
   );
 }
 
-const styles = {
-  container: {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    height: '4px', // thickness of the line
-    width: '100%',
-    backgroundColor: 'transparent',
-    zIndex: 1000,
-  },
-  progressBar: {
-    height: '100%',
-    backgroundColor: '#fbbf24', // yellow color
-    transition: 'width 0.2s ease-out',
-  },
-};
+// const styles = {
+//   container: {
+//     position: 'fixed',
+//     top: 0,
+//     left: 0,
+//     height: '4px', // thickness of the line
+//     width: '100%',
+//     backgroundColor: 'transparent',
+//     zIndex: 1000,
+//   },
+//   progressBar: {
+//     height: '100%',
+//     backgroundColor: '#fbbf24', // yellow color
+//     transition: 'width 0.2s ease-out',
+//   },
+// };
 
 export default ScrollProgress;
