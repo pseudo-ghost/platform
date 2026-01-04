@@ -7,6 +7,9 @@ import Courses from './components/NewCourses';
 import Team from './components/Team';
 import Footer from './components/Footer';
 import ScrollProgress from './components/ScrollProgress';
+import Pricing from './components/Pricing';
+import PricingCards from './components/PricingCards';
+
 
 function App() {
   return (
@@ -17,6 +20,8 @@ function App() {
       <About />
       <Features />
       <Courses />
+      <Pricing />
+      <PricingCards />
       <Team />
       <Footer />
     </div>
