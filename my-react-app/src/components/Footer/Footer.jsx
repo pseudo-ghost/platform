@@ -1,4 +1,12 @@
 import React from "react";
+import { FaInstagram, FaLinkedin, FaWrench } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
+import { CiGlobe } from "react-icons/ci";
+import { FaGears } from "react-icons/fa6";
+import { GoGraph } from "react-icons/go";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { MdEmail } from "react-icons/md";
+import { IoPin } from "react-icons/io5";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +20,7 @@ function Footer() {
         {/* Company Info - Wider column for description */}
         <div style={styles.column}>
           <div style={styles.logoContainer}>
-            <span style={styles.logoIcon}>🎓</span>
+            <span style={styles.logoIcon}><FaWrench></FaWrench></span>
             <h2 style={styles.logo}>SkillForge</h2>
           </div>
           <p style={styles.description}>
@@ -59,23 +67,15 @@ function Footer() {
           <h4 style={styles.heading}>Our Platform</h4>
           <ul style={styles.list} role="list">
             <li style={styles.listItem}>
-              <span style={styles.featureIcon}>📚</span>
-              <span>Online Courses</span>
+              <span style={styles.featureIcon}><FaGears></FaGears></span>
+              <span>Learning Management Systems</span>
             </li>
             <li style={styles.listItem}>
-              <span style={styles.featureIcon}>🚀</span>
-              <span>Skill Development</span>
-            </li>
-            <li style={styles.listItem}>
-              <span style={styles.featureIcon}>📈</span>
+              <span style={styles.featureIcon}><GoGraph></GoGraph></span>
               <span>Progress Tracking</span>
             </li>
             <li style={styles.listItem}>
-              <span style={styles.featureIcon}>🏆</span>
-              <span>Certificates</span>
-            </li>
-            <li style={styles.listItem}>
-              <span style={styles.featureIcon}>🤖</span>
+              <span style={styles.featureIcon}><GiArtificialIntelligence></GiArtificialIntelligence></span>
               <span>AI Learning Support</span>
             </li>
           </ul>
@@ -86,7 +86,7 @@ function Footer() {
           <h4 style={styles.heading}>Contact</h4>
           <div style={styles.contactInfo}>
             <div style={styles.contactItem}>
-              <span style={styles.contactIcon}>✉️</span>
+              <span style={styles.contactIcon}><MdEmail></MdEmail></span>
               <a 
                 href="mailto:info@skillforge.com" 
                 style={styles.contactLink}
@@ -96,7 +96,7 @@ function Footer() {
               </a>
             </div>
             <div style={styles.contactItem}>
-              <span style={styles.contactIcon}>📍</span>
+              <span style={styles.contactIcon}><IoPin></IoPin></span>
               <span>Malaysia</span>
             </div>
           </div>
@@ -110,7 +110,7 @@ function Footer() {
                 style={styles.socialLink}
                 aria-label="Visit SkillForge website"
               >
-                <span style={styles.socialIcon}>🌐</span>
+                <span style={styles.socialIcon}><CiGlobe></CiGlobe></span>
                 <span style={styles.socialLabel}>Website</span>
               </a>
               <a 
@@ -118,7 +118,7 @@ function Footer() {
                 style={styles.socialLink}
                 aria-label="Follow SkillForge on Twitter"
               >
-                <span style={styles.socialIcon}>🐦</span>
+                <span style={styles.socialIcon}><RiTwitterXFill></RiTwitterXFill></span>
                 <span style={styles.socialLabel}>Twitter</span>
               </a>
               <a 
@@ -126,7 +126,7 @@ function Footer() {
                 style={styles.socialLink}
                 aria-label="Follow SkillForge on Instagram"
               >
-                <span style={styles.socialIcon}>📸</span>
+                <span style={styles.socialIcon}><FaInstagram></FaInstagram></span>
                 <span style={styles.socialLabel}>Instagram</span>
               </a>
               <a 
@@ -134,7 +134,7 @@ function Footer() {
                 style={styles.socialLink}
                 aria-label="Follow SkillForge on LinkedIn"
               >
-                <span style={styles.socialIcon}>💼</span>
+                <span style={styles.socialIcon}><FaLinkedin></FaLinkedin></span>
                 <span style={styles.socialLabel}>LinkedIn</span>
               </a>
             </div>
