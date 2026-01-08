@@ -40,7 +40,7 @@ function Team() {
     },
     {
       name: "Parisa",
-      role: "Chief Learning Officer & Co-Founder",
+      role: "CFO & Co-Founder",
       photo: "/Parisa.jpeg",
       description: "Learning experience designer and product strategist. Focuses on creating intuitive, learner-centered platforms that drive measurable outcomes for organizations.",
       education: "Bachelor of Computer Science, Universiti Sains Malaysia",
@@ -206,7 +206,7 @@ function Team() {
               {/* Role Badge */}
               <div style={styles.roleBadge}>
                 <span style={styles.roleIcon}>
-                  {founder.role.includes('CEO') ? '👔' : founder.role.includes('CTO') ? '💻' : '🎨'}
+                  
                 </span>
                 <span style={styles.roleBadgeText}>{founder.role.split('&')[0].trim()}</span>
               </div>
@@ -223,7 +223,7 @@ function Team() {
 
               {/* Education */}
               <div style={styles.educationSection}>
-                <span style={styles.educationIcon}>🎓</span>
+                <span style={styles.educationIcon}></span>
                 <span style={styles.educationText}>{founder.education}</span>
               </div>
 
@@ -388,18 +388,18 @@ const styles = {
   founderName: {
     fontSize: '1.5rem',
     fontWeight: '700',
-    color: '#F5D5E0',
+    color: 'white',
     marginBottom: '0.25rem',
   },
   founderRole: {
     fontSize: '1rem',
-    color: '#210635', // MOON Vibrant Purple
+    color: 'white', // MOON Vibrant Purple
     fontWeight: '600',
     marginBottom: '1.25rem',
   },
   founderDescription: {
     fontSize: '0.9375rem',
-    color: '#F5D5E0',
+    color: 'white',
     opacity: 0.8,
     lineHeight: '1.7',
     marginBottom: '1.5rem',
@@ -416,7 +416,7 @@ const styles = {
   },
   educationText: {
     fontSize: '0.875rem',
-    color: '#210635F',
+    color: 'white',
     lineHeight: '1.5',
   },
   expertiseContainer: {
