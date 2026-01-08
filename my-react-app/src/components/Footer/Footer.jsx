@@ -25,8 +25,7 @@ function Footer() {
             <h2>LuminaSystems</h2> 
           </div>
           <p style={styles.description}>
-            A technology-driven learning platform that helps students and 
-            professionals develop in-demand skills through modern digital solutions.
+            A technology-driven service platform that helps organizations and companies develop in-demand skills through modern digital solutions.
           </p>
           
           {/* Newsletter Signup */}
