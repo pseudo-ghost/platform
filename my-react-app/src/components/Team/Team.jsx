@@ -449,7 +449,7 @@ const styles = {
   statNumber: {
     fontSize: 'clamp(2.5rem, 4vw, 3rem)',
     fontWeight: '800',
-    color: '#7B337E',
+    color: 'white',
     lineHeight: '1',
   },
   statLabel: {
