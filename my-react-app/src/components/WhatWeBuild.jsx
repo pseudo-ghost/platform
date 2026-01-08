@@ -313,33 +313,32 @@ const examplesData = [
 const styles = {
   section: {
     width: "100%",
-    padding: "60px 20px 80px",
-    backgroundColor: "#ffffff",
+    padding: "0px 20px 80px",
+    backgroundColor: "#210635", 
     boxSizing: "border-box",
-    fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif",
+    fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
   },
 
   // HERO
   hero: {
     textAlign: "center",
-    marginBottom: "80px",
     padding: "20px 0",
   },
   heroTitle: {
     fontSize: "2.8rem",
     fontWeight: "700",
-    color: "#1e293b",
+    color: "#F5D5E0", 
     marginBottom: "24px",
     lineHeight: "1.2",
     letterSpacing: "-0.02em",
   },
   highlight: {
-    color: "#3b82f6",
+    color: "#7B337E", 
   },
   heroSubtitle: {
     fontSize: "1.25rem",
     lineHeight: "1.7",
-    color: "#475569",
+    color: "#6667AB", 
     maxWidth: "800px",
     margin: "0 auto",
   },
@@ -349,14 +348,14 @@ const styles = {
     textAlign: "center",
     fontSize: "2.25rem",
     fontWeight: "700",
-    color: "#1e293b",
+    color: "#F5D5E0", 
     marginBottom: "16px",
     letterSpacing: "-0.01em",
   },
   sectionSubtitle: {
     textAlign: "center",
     fontSize: "1.125rem",
-    color: "#64748b",
+    color: "#6667AB", 
     maxWidth: "700px",
     margin: "0 auto 60px",
     lineHeight: "1.6",
@@ -372,11 +371,12 @@ const styles = {
     gap: "30px",
   },
   solutionCard: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "rgba(66, 13, 75, 0.4)", 
+    backdropFilter: "blur(12px)", 
     padding: "32px",
-    borderRadius: "12px",
-    border: "1px solid #f1f5f9",
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.04)",
+    borderRadius: "16px",
+    border: "1px solid rgba(245, 213, 224, 0.1)", 
+    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
     transition: "transform 0.3s ease, box-shadow 0.3s ease",
   },
   solutionIcon: {
@@ -387,24 +387,26 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     marginBottom: "20px",
-    fontSize: "1.8rem",
+    backgroundColor: "rgba(123, 51, 126, 0.2)", 
   },
   solutionIconSymbol: {
     fontSize: "1.8rem",
+    color: "#F5D5E0", 
   },
   solutionTitle: {
     fontSize: "1.25rem",
     fontWeight: "600",
-    color: "#1e293b",
+    color: "#F5D5E0", 
     marginBottom: "12px",
     lineHeight: "1.3",
   },
   solutionDescription: {
     fontSize: "1rem",
     lineHeight: "1.6",
-    color: "#64748b",
+    color: "#6667AB", 
     marginBottom: "20px",
     minHeight: "72px",
+    opacity: 0.9,
   },
   solutionFeatures: {
     display: "flex",
@@ -413,20 +415,19 @@ const styles = {
     marginTop: "16px",
   },
   featureTag: {
-    backgroundColor: "#f8fafc",
-    color: "#475569",
+    backgroundColor: "rgba(102, 103, 171, 0.2)", 
+    color: "#F5D5E0", 
     padding: "6px 12px",
     borderRadius: "20px",
     fontSize: "0.85rem",
     fontWeight: "500",
+    border: "1px solid rgba(245, 213, 224, 0.1)",
   },
 
   // CAPABILITIES
   capabilitiesSection: {
     backgroundColor: "#f8fafc",
     padding: "60px 40px",
-    borderRadius: "16px",
-    marginBottom: "100px",
   },
   capabilitiesGrid: {
     display: "grid",
@@ -467,7 +468,7 @@ const styles = {
 
   // PROCESS
   processSection: {
-    marginBottom: "100px",
+   
   },
   processTimeline: {
     maxWidth: "800px",
@@ -538,7 +539,6 @@ const styles = {
     padding: "60px 40px",
     borderRadius: "16px",
     border: "1px solid #e2e8f0",
-    marginBottom: "100px",
   },
   differentiatorsGrid: {
     display: "grid",
@@ -571,72 +571,77 @@ const styles = {
     color: "#64748b",
   },
 
-  // EXAMPLES
-  examplesSection: {
-    marginBottom: "100px",
-  },
-  examplesGrid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-    gap: "30px",
-  },
-  exampleCard: {
-    backgroundColor: "#ffffff",
-    padding: "32px",
-    borderRadius: "12px",
-    border: "1px solid #f1f5f9",
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.04)",
-  },
-  exampleHeader: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: "20px",
-  },
-  exampleType: {
-    padding: "6px 12px",
-    borderRadius: "20px",
-    fontSize: "0.85rem",
-    fontWeight: "600",
-    color: "#475569",
-  },
-  exampleScale: {
-    fontSize: "0.85rem",
-    color: "#64748b",
-    fontWeight: "500",
-  },
-  exampleTitle: {
-    fontSize: "1.25rem",
-    fontWeight: "600",
-    color: "#1e293b",
-    marginBottom: "12px",
-  },
-  exampleDescription: {
-    fontSize: "1rem",
-    lineHeight: "1.6",
-    color: "#64748b",
-    marginBottom: "20px",
-  },
-  exampleFeatures: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "10px",
-  },
-  exampleFeature: {
-    display: "flex",
-    alignItems: "flex-start",
-    gap: "10px",
-    fontSize: "0.95rem",
-    color: "#475569",
-    lineHeight: "1.5",
-  },
-  featureDot: {
-    color: "#3b82f6",
-    fontWeight: "700",
-    flexShrink: "0",
-    marginTop: "2px",
-  },
-
+// EXAMPLES SECTION
+examplesSection: {
+  padding: "40px 20px",
+},
+examplesGrid: {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+  gap: "30px",
+},
+exampleCard: {
+  backgroundColor: "rgba(66, 13, 75, 0.4)", 
+  backdropFilter: "blur(12px)", 
+  WebkitBackdropFilter: "blur(12px)",
+  padding: "32px",
+  borderRadius: "24px",
+  border: "1px solid rgba(245, 213, 224, 0.1)", 
+  boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
+  transition: "transform 0.3s ease",
+},
+exampleHeader: {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  marginBottom: "20px",
+},
+exampleType: {
+  padding: "6px 12px",
+  borderRadius: "20px",
+  fontSize: "0.85rem",
+  fontWeight: "600",
+  backgroundColor: "rgba(102, 103, 171, 0.2)", 
+  color: "#F5D5E0", 
+},
+exampleScale: {
+  fontSize: "0.85rem",
+  color: "#6667AB", 
+  fontWeight: "600",
+},
+exampleTitle: {
+  fontSize: "1.5rem",
+  fontWeight: "700",
+  color: "#F5D5E0", 
+  marginBottom: "12px",
+},
+exampleDescription: {
+  fontSize: "1rem",
+  lineHeight: "1.6",
+  color: "#6667AB", 
+  marginBottom: "20px",
+  opacity: 0.9,
+},
+exampleFeatures: {
+  display: "flex",
+  flexDirection: "column",
+  gap: "10px",
+},
+exampleFeature: {
+  display: "flex",
+  alignItems: "flex-start",
+  gap: "10px",
+  fontSize: "0.95rem",
+  color: "#F5D5E0", 
+  lineHeight: "1.5",
+  opacity: 0.8,
+},
+featureDot: {
+  color: "#7B337E", 
+  fontWeight: "900",
+  flexShrink: "0",
+  marginTop: "2px",
+},
   // CTA
   ctaSection: {
     textAlign: "center",

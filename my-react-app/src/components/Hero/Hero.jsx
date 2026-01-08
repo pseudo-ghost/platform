@@ -76,16 +76,7 @@ function HomePage() {
 
         <div className="hero-container">
           <div className="hero-content">
-            {/* Enterprise Badge */}
-            <div 
-              className="enterprise-badge"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? 'translateY(0)' : 'translateY(10px)',
-              }}
-            >
-            </div>
-
+            
             {/* Main Headline */}
             <h1 className="hero-title">
               <span className="title-line">Turn Training Into Measurable</span>
@@ -277,11 +268,11 @@ function HomePage() {
 // Enhanced CSS Styles with better mobile responsiveness
 const styles = `
 .homepage {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-  color: #606060;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #F5D5E0;
   line-height: 1.6;
   width: 100%;
-  background-color: white;
+  background-color: #210635; 
   min-height: 100vh;
 }
 
@@ -289,7 +280,7 @@ const styles = `
 .hero-section {
   position: relative;
   min-height: 100vh;
-  background: white;
+  background: radial-gradient(circle at top right, #420D4B, #210635); /* Subtle purple glow */
   padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
   overflow: hidden;
   display: flex;
@@ -350,18 +341,14 @@ const styles = `
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: rgba(103, 47, 230, 0.1);
-  color: #3F00FF;
+  background-color: rgba(102, 103, 171, 0.2); 
+  color: #F5D5E0;
   padding: 0.625rem 1.25rem;
   border-radius: 2rem;
   font-size: clamp(0.75rem, 2vw, 0.875rem);
   font-weight: 600;
   margin-bottom: 1.5rem;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  text-align: center;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  border: 1px solid rgba(245, 213, 224, 0.2);
 }
 
 @media (min-width: 1024px) {
@@ -383,9 +370,10 @@ const styles = `
 .hero-title {
   font-size: clamp(1.75rem, 5vw, 3.25rem);
   font-weight: 800;
-  color: #191970;
+  color: #F5D5E0;
   margin: 0 0 1.5rem 0;
   line-height: 1.1;
+  margin-top: 80px;
 }
 
 .title-line {
@@ -394,12 +382,12 @@ const styles = `
 
 .title-highlight {
   display: block;
-  color: #672FE6;
+  color: #7B337E;
 }
 
 .hero-subtitle {
   font-size: clamp(1rem, 2vw, 1.125rem);
-  color: #606060;
+  color: #6667AB; 
   line-height: 1.6;
   margin: 0 0 2rem 0;
 }
@@ -419,29 +407,29 @@ const styles = `
 }
 
 .metric-card {
-  background-color: white;
-  border: 1px solid rgba(103, 47, 230, 0.1);
+  background-color: rgba(66, 13, 75, 0.4); 
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(245, 213, 224, 0.1);
   border-radius: 0.75rem;
   padding: clamp(1rem, 2vw, 1.25rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .metric-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(103, 47, 230, 0.1);
-  border-color: #672FE6;
+  transform: translateY(-5px);
+  background-color: rgba(123, 51, 126, 0.3);
+  border-color: #7B337E;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .metric-value {
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
-  color: #672FE6;
+  color: #F5D5E0;
   line-height: 1;
-  margin-bottom: 0.5rem;
 }
 
 .metric-label {
@@ -486,22 +474,15 @@ const styles = `
 }
 
 .primary-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: clamp(0.875rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
-  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  background-color: #7B337E;
+  color: #F5D5E0;
+  padding: 1rem 2rem;
   border-radius: 0.75rem;
+  font-weight: 700;
   border: none;
-  background-color: #672FE6;
-  color: white;
-  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  min-width: clamp(12rem, 20vw, 16rem);
-  width: 100%;
-  max-width: 300px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(123, 51, 126, 0.4);
 }
 
 @media (min-width: 768px) {
@@ -521,12 +502,8 @@ const styles = `
 }
 
 .secondary-link {
-  font-size: clamp(0.875rem, 1.5vw, 0.9375rem);
-  color: #672FE6;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.2s ease;
+  color: #6667AB;
+  text-decoration: underline;
 }
 
 .secondary-link:hover {
@@ -582,15 +559,9 @@ const styles = `
 }
 
 .industry-card {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  padding: 0.75rem 1rem;
-  background-color: white;
-  border: 1px solid rgba(103, 47, 230, 0.1);
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: rgba(102, 103, 171, 0.1);
+  color: #F5D5E0;
+  border: 1px solid rgba(245, 213, 224, 0.1);
 }
 
 .industry-card:hover {
@@ -630,13 +601,11 @@ const styles = `
 }
 
 .dashboard-card {
-  background-color: white;
+  background-color: rgba(33, 6, 53, 0.8);
   border-radius: 1.25rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
   padding: clamp(1.25rem, 2vw, 1.5rem);
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(103, 47, 230, 0.1);
+  border: 1px solid rgba(102, 103, 171, 0.3);
 }
 
 .dashboard-header {
@@ -722,26 +691,13 @@ const styles = `
 }
 
 .progress-fill {
-  height: 100%;
-  width: 65%;
-  background-color: #672FE6;
-  border-radius: 0.375rem;
+  background-color: #7B337E;
 }
 
 .feature-badge {
-  position: absolute;
-  background-color: white;
-  border: 1px solid rgba(103, 47, 230, 0.1);
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  font-size: clamp(0.7rem, 1vw, 0.75rem);
-  font-weight: 500;
-  z-index: 2;
-  transition: transform 0.1s linear;
+  background-color: #420D4B;
+  color: #F5D5E0;
+  border: 1px solid rgba(245, 213, 224, 0.2);
 }
 
 .badge1 {
@@ -786,9 +742,7 @@ const styles = `
 }
 
 .scroll-text {
-  font-size: 0.75rem;
-  color: #606060;
-  font-weight: 500;
+  color: #6667AB;
 }
 
 /* Enhanced Responsive Breakpoints */
