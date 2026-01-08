@@ -3,12 +3,11 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Features from './components/Features';
-import Courses from './components/NewCourses';
 import Team from './components/Team';
 import Footer from './components/Footer';
 import ScrollProgress from './components/ScrollProgress';
 import Pricing from './components/Pricing';
-import PricingCards from './components/PricingCards';
+import WhatWeBuild from './components/WhatWeBuild';
 
 
 function App() {
@@ -17,11 +16,10 @@ function App() {
       <ScrollProgress />
       <Navbar />
       <Hero />
-      <About />
       <Features />
-      <Courses />
+      <WhatWeBuild />
       <Pricing />
-      <PricingCards />
+      <About />
       <Team />
       <Footer />
     </div>

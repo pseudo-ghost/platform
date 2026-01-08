@@ -1,63 +1,161 @@
 import React from "react";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <footer style={styles.footer}>
+      {/* Top border accent */}
+      <div style={styles.topBorder}></div>
+      
       <div style={styles.container}>
-
-        {/* Company Info */}
+        {/* Company Info - Wider column for description */}
         <div style={styles.column}>
-          <h2 style={styles.logo}>SkillForge</h2>
+          <div style={styles.logoContainer}>
+            <span style={styles.logoIcon}>🎓</span>
+            <h2 style={styles.logo}>SkillForge</h2>
+          </div>
           <p style={styles.description}>
-            SkillForge is a technology-driven learning platform that helps students
-            and professionals develop in-demand skills through modern digital
-            solutions.
+            A technology-driven learning platform that helps students and 
+            professionals develop in-demand skills through modern digital solutions.
           </p>
+          
+          {/* Newsletter Signup */}
+          <div style={styles.newsletter}>
+            <p style={styles.newsletterLabel}>Stay updated with learning insights</p>
+            <div style={styles.newsletterForm}>
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
+                style={styles.newsletterInput}
+                aria-label="Email for newsletter subscription"
+              />
+              <button style={styles.newsletterButton}>Subscribe</button>
+            </div>
+          </div>
         </div>
 
         {/* Quick Links */}
         <div style={styles.column}>
           <h4 style={styles.heading}>Quick Links</h4>
-          <ul style={styles.list}>
-            <li>About Us</li>
-            <li>Explore Courses</li>
-            <li>Pricing</li>
-            <li>Contact</li>
+          <ul style={styles.list} role="list">
+            <li style={styles.listItem}>
+              <a href="/about" style={styles.link} aria-label="About SkillForge">About Us</a>
+            </li>
+            <li style={styles.listItem}>
+              <a href="/courses" style={styles.link} aria-label="Explore courses">Explore Courses</a>
+            </li>
+            <li style={styles.listItem}>
+              <a href="/pricing" style={styles.link} aria-label="View pricing plans">Pricing</a>
+            </li>
+            <li style={styles.listItem}>
+              <a href="/contact" style={styles.link} aria-label="Contact SkillForge">Contact</a>
+            </li>
           </ul>
         </div>
 
-        {/* Services / Features */}
+        {/* Platform Features */}
         <div style={styles.column}>
           <h4 style={styles.heading}>Our Platform</h4>
-          <ul style={styles.list}>
-            <li>Online Courses</li>
-            <li>Skill Development</li>
-            <li>Progress Tracking</li>
-            <li>Certificates</li>
-            <li>AI Learning Support</li>
+          <ul style={styles.list} role="list">
+            <li style={styles.listItem}>
+              <span style={styles.featureIcon}>📚</span>
+              <span>Online Courses</span>
+            </li>
+            <li style={styles.listItem}>
+              <span style={styles.featureIcon}>🚀</span>
+              <span>Skill Development</span>
+            </li>
+            <li style={styles.listItem}>
+              <span style={styles.featureIcon}>📈</span>
+              <span>Progress Tracking</span>
+            </li>
+            <li style={styles.listItem}>
+              <span style={styles.featureIcon}>🏆</span>
+              <span>Certificates</span>
+            </li>
+            <li style={styles.listItem}>
+              <span style={styles.featureIcon}>🤖</span>
+              <span>AI Learning Support</span>
+            </li>
           </ul>
         </div>
 
-        {/* Contact */}
+        {/* Contact & Social */}
         <div style={styles.column}>
           <h4 style={styles.heading}>Contact</h4>
-          <p style={styles.contact}>📧 info@skillforge.com</p>
-          <p style={styles.contact}>📍 Malaysia</p>
-
-          {/* Social Icons */}
-          <div style={styles.socials}>
-            <span style={styles.icon}>🌐</span>
-            <span style={styles.icon}>🐦</span>
-            <span style={styles.icon}>📸</span>
-            <span style={styles.icon}>💼</span>
+          <div style={styles.contactInfo}>
+            <div style={styles.contactItem}>
+              <span style={styles.contactIcon}>✉️</span>
+              <a 
+                href="mailto:info@skillforge.com" 
+                style={styles.contactLink}
+                aria-label="Email SkillForge at info@skillforge.com"
+              >
+                info@skillforge.com
+              </a>
+            </div>
+            <div style={styles.contactItem}>
+              <span style={styles.contactIcon}>📍</span>
+              <span>Malaysia</span>
+            </div>
+          </div>
+          
+          {/* Social Icons with labels */}
+          <div style={styles.socialSection}>
+            <p style={styles.socialHeading}>Follow Us</p>
+            <div style={styles.socials} role="list">
+              <a 
+                href="https://skillforge.com" 
+                style={styles.socialLink}
+                aria-label="Visit SkillForge website"
+              >
+                <span style={styles.socialIcon}>🌐</span>
+                <span style={styles.socialLabel}>Website</span>
+              </a>
+              <a 
+                href="https://twitter.com/skillforge" 
+                style={styles.socialLink}
+                aria-label="Follow SkillForge on Twitter"
+              >
+                <span style={styles.socialIcon}>🐦</span>
+                <span style={styles.socialLabel}>Twitter</span>
+              </a>
+              <a 
+                href="https://instagram.com/skillforge" 
+                style={styles.socialLink}
+                aria-label="Follow SkillForge on Instagram"
+              >
+                <span style={styles.socialIcon}>📸</span>
+                <span style={styles.socialLabel}>Instagram</span>
+              </a>
+              <a 
+                href="https://linkedin.com/company/skillforge" 
+                style={styles.socialLink}
+                aria-label="Follow SkillForge on LinkedIn"
+              >
+                <span style={styles.socialIcon}>💼</span>
+                <span style={styles.socialLabel}>LinkedIn</span>
+              </a>
+            </div>
           </div>
         </div>
-
       </div>
 
-      {/* Bottom */}
-      <div style={styles.bottom}>
-        © 2026 SkillForge. All rights reserved.
+      {/* Copyright & Bottom Links */}
+      <div style={styles.bottomContainer}>
+        <div style={styles.bottomContent}>
+          <div style={styles.copyright}>
+            © {currentYear} SkillForge. All rights reserved.
+          </div>
+          <div style={styles.bottomLinks}>
+            <a href="/privacy" style={styles.bottomLink} aria-label="Privacy Policy">Privacy Policy</a>
+            <span style={styles.divider}>•</span>
+            <a href="/terms" style={styles.bottomLink} aria-label="Terms of Service">Terms of Service</a>
+            <span style={styles.divider}>•</span>
+            <a href="/cookies" style={styles.bottomLink} aria-label="Cookie Policy">Cookie Policy</a>
+          </div>
+        </div>
       </div>
     </footer>
   );
@@ -67,62 +165,348 @@ const styles = {
   footer: {
     backgroundColor: "#0f172a",
     color: "#e5e7eb",
-    padding: "50px 20px 20px",
-    marginTop: "80px",
+    padding: "0",
+    marginTop: "clamp(3rem, 6vw, 6rem)",
+    position: "relative",
+    fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
   },
+  
+  // Top border accent
+  topBorder: {
+    height: "0.25rem",
+    background: "linear-gradient(90deg, #3b82f6, #8b5cf6)",
+    width: "100%",
+  },
+  
+  // Main content container
   container: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-    gap: "40px",
-    maxWidth: "1200px",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))",
+    gap: "clamp(2rem, 4vw, 3rem)",
+    maxWidth: "min(100%, 1200px)",
     margin: "0 auto",
+    padding: "clamp(3rem, 5vw, 4rem) clamp(1.5rem, 4vw, 2rem)",
   },
+  
+  // Columns
   column: {
-    lineHeight: "1.7",
+    display: "flex",
+    flexDirection: "column",
+    gap: "1.5rem",
+  },
+  
+  // Brand section
+  logoContainer: {
+    display: "flex",
+    alignItems: "center",
+    gap: "0.75rem",
+    marginBottom: "0.5rem",
+  },
+  logoIcon: {
+    fontSize: "2rem",
+    background: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
+    color: "white",
+    width: "3rem",
+    height: "3rem",
+    borderRadius: "0.75rem",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexShrink: "0",
   },
   logo: {
-    fontSize: "1.8rem",
-    fontWeight: "bold",
-    marginBottom: "10px",
+    fontSize: "clamp(1.5rem, 2.5vw, 2rem)",
+    fontWeight: "800",
     color: "#ffffff",
+    margin: "0",
+    lineHeight: "1.2",
   },
   description: {
-    fontSize: "0.95rem",
+    fontSize: "clamp(0.9375rem, 1.5vw, 1rem)",
     color: "#cbd5e1",
+    lineHeight: "1.6",
+    margin: "0",
   },
+  
+  // Newsletter
+  newsletter: {
+    marginTop: "1rem",
+  },
+  newsletterLabel: {
+    fontSize: "0.875rem",
+    color: "#94a3b8",
+    marginBottom: "0.75rem",
+    fontWeight: "500",
+  },
+  newsletterForm: {
+    display: "flex",
+    gap: "0.5rem",
+    flexWrap: "wrap",
+  },
+  newsletterInput: {
+    flex: "1",
+    minWidth: "12rem",
+    padding: "0.75rem 1rem",
+    fontSize: "0.875rem",
+    borderRadius: "0.5rem",
+    border: "1px solid #334155",
+    backgroundColor: "#1e293b",
+    color: "#f1f5f9",
+    outline: "none",
+    transition: "border-color 0.2s ease",
+  },
+  newsletterInputFocus: {
+    borderColor: "#3b82f6",
+  },
+  newsletterButton: {
+    padding: "0.75rem 1.25rem",
+    fontSize: "0.875rem",
+    fontWeight: "600",
+    borderRadius: "0.5rem",
+    border: "none",
+    backgroundColor: "#3b82f6",
+    color: "white",
+    cursor: "pointer",
+    transition: "all 0.2s ease",
+    whiteSpace: "nowrap",
+  },
+  newsletterButtonHover: {
+    backgroundColor: "#2563eb",
+    transform: "translateY(-1px)",
+  },
+  
+  // Headings
   heading: {
-    fontSize: "1.1rem",
-    marginBottom: "10px",
+    fontSize: "clamp(1rem, 1.5vw, 1.125rem)",
+    fontWeight: "600",
     color: "#ffffff",
+    margin: "0 0 1rem 0",
+    letterSpacing: "0.025em",
   },
+  
+  // Lists
   list: {
     listStyle: "none",
-    padding: 0,
-    margin: 0,
-    cursor: "pointer",
+    padding: "0",
+    margin: "0",
+    display: "flex",
+    flexDirection: "column",
+    gap: "0.75rem",
   },
-  contact: {
-    fontSize: "0.95rem",
+  listItem: {
+    display: "flex",
+    alignItems: "center",
+    gap: "0.5rem",
+    fontSize: "clamp(0.875rem, 1.5vw, 0.9375rem)",
+    color: "#cbd5e1",
+    transition: "color 0.2s ease",
+  },
+  
+  // Links
+  link: {
+    color: "#cbd5e1",
+    textDecoration: "none",
+    transition: "color 0.2s ease",
+    cursor: "pointer",
+    padding: "0.25rem 0",
+    display: "inline-block",
+  },
+  linkHover: {
+    color: "#3b82f6",
+  },
+  
+  // Feature icons
+  featureIcon: {
+    fontSize: "1rem",
+    width: "1.5rem",
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexShrink: "0",
+  },
+  
+  // Contact section
+  contactInfo: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "1rem",
+  },
+  contactItem: {
+    display: "flex",
+    alignItems: "center",
+    gap: "0.75rem",
+    fontSize: "clamp(0.875rem, 1.5vw, 0.9375rem)",
     color: "#cbd5e1",
   },
+  contactIcon: {
+    fontSize: "1rem",
+    width: "1.5rem",
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexShrink: "0",
+  },
+  contactLink: {
+    color: "#cbd5e1",
+    textDecoration: "none",
+    transition: "color 0.2s ease",
+  },
+  contactLinkHover: {
+    color: "#3b82f6",
+  },
+  
+  // Social section
+  socialSection: {
+    marginTop: "1rem",
+  },
+  socialHeading: {
+    fontSize: "0.875rem",
+    color: "#94a3b8",
+    marginBottom: "0.75rem",
+    fontWeight: "500",
+  },
   socials: {
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+    gap: "0.75rem",
+  },
+  socialLink: {
     display: "flex",
-    gap: "12px",
-    marginTop: "10px",
-    fontSize: "1.2rem",
-    cursor: "pointer",
+    alignItems: "center",
+    gap: "0.5rem",
+    color: "#cbd5e1",
+    textDecoration: "none",
+    fontSize: "0.875rem",
+    transition: "color 0.2s ease",
+    padding: "0.5rem",
+    borderRadius: "0.375rem",
   },
-  icon: {
-    transition: "transform 0.2s",
+  socialLinkHover: {
+    color: "#3b82f6",
+    backgroundColor: "rgba(59, 130, 246, 0.1)",
   },
-  bottom: {
-    textAlign: "center",
-    marginTop: "40px",
-    paddingTop: "15px",
+  socialIcon: {
+    fontSize: "1rem",
+  },
+  socialLabel: {
+    fontSize: "0.8125rem",
+  },
+  
+  // Bottom section
+  bottomContainer: {
     borderTop: "1px solid #334155",
-    fontSize: "0.85rem",
-    color: "#9ca3af",
+    padding: "clamp(1.5rem, 3vw, 2rem) clamp(1.5rem, 4vw, 2rem)",
+    backgroundColor: "rgba(15, 23, 42, 0.9)",
+  },
+  bottomContent: {
+    maxWidth: "min(100%, 1200px)",
+    margin: "0 auto",
+    display: "flex",
+    flexDirection: "column",
+    gap: "1rem",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  '@media (min-width: 640px)': {
+    bottomContent: {
+      flexDirection: "row",
+    },
+  },
+  copyright: {
+    fontSize: "0.8125rem",
+    color: "#94a3b8",
+    textAlign: "center",
+  },
+  '@media (min-width: 640px)': {
+    copyright: {
+      textAlign: "left",
+    },
+  },
+  bottomLinks: {
+    display: "flex",
+    gap: "0.75rem",
+    alignItems: "center",
+    flexWrap: "wrap",
+    justifyContent: "center",
+  },
+  '@media (min-width: 640px)': {
+    bottomLinks: {
+      justifyContent: "flex-end",
+    },
+  },
+  bottomLink: {
+    color: "#94a3b8",
+    textDecoration: "none",
+    fontSize: "0.8125rem",
+    transition: "color 0.2s ease",
+  },
+  bottomLinkHover: {
+    color: "#cbd5e1",
+  },
+  divider: {
+    color: "#475569",
+    fontSize: "0.75rem",
   },
 };
+
+// Add hover effects
+const addHoverEffects = () => {
+  const style = document.createElement('style');
+  style.textContent = `
+    @media (hover: hover) {
+      .footer-link:hover {
+        color: #3b82f6;
+      }
+      .footer-social-link:hover {
+        color: #3b82f6;
+        background-color: rgba(59, 130, 246, 0.1);
+      }
+      .footer-newsletter-input:focus {
+        border-color: #3b82f6;
+      }
+      .footer-newsletter-button:hover {
+        background-color: #2563eb;
+        transform: translateY(-1px);
+      }
+      .footer-bottom-link:hover {
+        color: #cbd5e1;
+      }
+    }
+    
+    /* Focus styles for accessibility */
+    .footer-link:focus-visible,
+    .footer-social-link:focus-visible,
+    .footer-newsletter-input:focus-visible,
+    .footer-newsletter-button:focus-visible,
+    .footer-bottom-link:focus-visible {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+    
+    /* Reduced motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+      }
+    }
+    
+    /* High contrast mode */
+    @media (prefers-contrast: high) {
+      .footer-top-border {
+        height: 3px;
+      }
+      .footer-bottom-container {
+        border-top: 2px solid currentColor;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+};
+
+// Add classes for hover effects
+if (typeof document !== 'undefined') {
+  addHoverEffects();
+}
 
 export default Footer;
