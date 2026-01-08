@@ -8,7 +8,7 @@ function WhatWeBuild() {
   }, []);
 
   return (
-    <section style={styles.section}>
+    <section id= "what-we-build" style={styles.section}>
       {/* HERO SECTION */}
       <div 
         style={{

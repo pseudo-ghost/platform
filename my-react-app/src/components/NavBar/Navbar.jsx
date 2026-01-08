@@ -20,8 +20,8 @@ function Navbar() {
 
   // Navigation items matching approved user flow
   const navItems = [
-    { label: "Home", id: "home" },
-    { label: "Success Stories", id: "success-stories" },
+    { label: "Home", id: "about" },
+    { label: "Success Stories", id: "features" },
     { label: "What We Build", id: "what-we-build" },
     { label: "Pricing", id: "pricing" },
     { label: "About Us", id: "about" },

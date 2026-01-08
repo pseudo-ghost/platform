@@ -157,7 +157,7 @@ function Team() {
   };
 
   return (
-    <section style={styles.section}>
+    <section id="founders" style={styles.section}>
       {/* Hero Section */}
       <div style={styles.hero}>
         <h1 style={styles.heroTitle}>Meet Our Founders</h1>

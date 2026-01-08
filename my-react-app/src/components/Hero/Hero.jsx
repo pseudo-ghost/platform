@@ -142,13 +142,14 @@ function HomePage() {
                 onMouseLeave={() => setHoveredButton(null)}
                 onClick={() => console.log('Schedule Demo clicked')}
                 aria-label="Schedule a personalized demo"
-              >
+              > 
+              
                 <span className="cta-icon">📅</span>
                 Schedule a Demo
               </button>
               
               <a 
-                href="#pricing"
+                href=""
                 className="secondary-link"
                 onClick={(e) => {
                   e.preventDefault();

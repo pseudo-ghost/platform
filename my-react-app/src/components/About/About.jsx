@@ -8,7 +8,7 @@ function About() {
   }, []);
 
   return (
-    <section style={styles.section}>
+    <section id="about" style={styles.section}>
       <style>{missionAnimations}</style>
       {/* MISSION SECTION */}
       <div 

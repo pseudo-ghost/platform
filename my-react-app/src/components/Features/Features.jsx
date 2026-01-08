@@ -43,7 +43,7 @@ function Features() {
   ];
 
   return (
-    <section style={styles.section}>
+    <section id="features" style={styles.section}>
       {/* Section Header */}
       <div style={styles.header}>
         <h2 style={styles.title}>How Organizations Use LuminaSystems</h2>

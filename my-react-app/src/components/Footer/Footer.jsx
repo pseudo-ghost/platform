@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -40,16 +41,13 @@ function Footer() {
           <h4 style={styles.heading}>Quick Links</h4>
           <ul style={styles.list} role="list">
             <li style={styles.listItem}>
-              <a href="/about" style={styles.link} aria-label="About SkillForge">About Us</a>
+              <a href="#about" style={styles.link} aria-label="About SkillForge">About Us</a>
             </li>
             <li style={styles.listItem}>
-              <a href="/courses" style={styles.link} aria-label="Explore courses">Explore Courses</a>
+              <a href="#features" style={styles.link} aria-label="Features ">Features</a>
             </li>
             <li style={styles.listItem}>
-              <a href="/pricing" style={styles.link} aria-label="View pricing plans">Pricing</a>
-            </li>
-            <li style={styles.listItem}>
-              <a href="/contact" style={styles.link} aria-label="Contact SkillForge">Contact</a>
+              <a href="#pricing" style={styles.link} aria-label="View pricing plans">Pricing</a>
             </li>
           </ul>
         </div>
