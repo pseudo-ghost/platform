@@ -42,7 +42,7 @@ function Team() {
       name: "Parisa",
       role: "CFO & Co-Founder",
       photo: "/Parisa.jpeg",
-      description: "Learning experience designer and product strategist. Focuses on creating intuitive, learner-centered platforms that drive measurable outcomes for organizations.",
+      description: "Strategic financial architect and operations leader. She ensures the long-term scalability of our enterprise learning infrastructure while driving sustainable business growth and investment.",
       education: "Bachelor of Computer Science, Universiti Sains Malaysia",
       expertise: ["Learning Design", "UX Strategy", "Product Development"],
       social: {
@@ -223,7 +223,9 @@ function Team() {
 
               {/* Education */}
               <div style={styles.educationSection}>
-                <span style={styles.educationIcon}></span>
+                <span style={styles.educationIcon}>
+                
+                </span>
                 <span style={styles.educationText}>{founder.education}</span>
               </div>
 
