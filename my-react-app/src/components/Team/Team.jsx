@@ -191,12 +191,40 @@ function Team() {
               <div style={styles.selectedRing}></div>
             )}
 
-            {/* Photo Container */}
-            <div style={styles.photoContainer}>
-              {/* Placeholder: Gradient with Initials */}
+            
+              <div style={styles.photoContainer}>
+              {founder.photo && (
+                <img 
+                  src={founder.photo} 
+                  alt={founder.name} 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block',
+                    position: 'relative',
+                    zIndex: 2, // Sits above the placeholder
+                    borderRadius: '12px'
+                  }}
+                  onError={(e) => { 
+                    e.target.style.display = 'none'; 
+                  }}
+                />
+              )}
+
+              {/* Placeholder: Absolute positioned so it doesn't push the image */}
               <div style={{
                 ...styles.photoPlaceholder,
-                background: founder.gradient
+                background: founder.gradient || 'linear-gradient(135deg, #7B337E 0%, #210635 100%)',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                zIndex: 1, // Sits behind the image
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}>
                 <span style={styles.initials}>
                   {founder.name.split(' ').map(n => n[0]).join('')}
@@ -206,7 +234,7 @@ function Team() {
               {/* Role Badge */}
               <div style={styles.roleBadge}>
                 <span style={styles.roleIcon}>
-                  
+                  {founder.role.includes('CEO') ? '👔' : founder.role.includes('CTO') ? '💻' : '📊'}
                 </span>
                 <span style={styles.roleBadgeText}>{founder.role.split('&')[0].trim()}</span>
               </div>
@@ -437,29 +465,33 @@ const styles = {
   },
   statsSection: {
     display: 'flex',
-    justifyContent: 'center',
+    flexDirection: 'row', // Force horizontal
+    justifyContent: 'space-around',
     alignItems: 'center',
-    gap: 'clamp(2rem, 4vw, 3rem)',
-    flexWrap: 'wrap',
-    maxWidth: '900px',
-    margin: '0 auto 4rem',
+    flexWrap: 'nowrap', // Prevent stats from dropping below
+    maxWidth: '1000px',
+    margin: '4rem auto',
     padding: '3rem 2rem',
-    backgroundColor: "rgba(66, 13, 75, 0.2)",
-    borderRadius: '1.25rem',
+    backgroundColor: 'rgba(66, 13, 75, 0.2)',
+    borderRadius: '24px',
     border: '1px solid rgba(245, 213, 224, 0.1)',
   },
+  statCard: {
+    display: 'flex',
+    flexDirection: 'row', // Number and label side-by-side
+    alignItems: 'baseline',
+    gap: '12px',
+  },
   statNumber: {
-    fontSize: 'clamp(2.5rem, 4vw, 3rem)',
+    fontSize: 'clamp(2.5rem, 4vw, 3.5rem)',
     fontWeight: '800',
-    color: 'white',
-    lineHeight: '1',
+    color: '#7B337E', // MOON Vibrant Purple
   },
   statLabel: {
-    fontSize: '0.9375rem',
-    color: 'white',
-    marginTop: '0.75rem',
-    textAlign: 'center',
-    fontWeight: '500',
+    fontSize: '0.9rem',
+    color: '#6667AB', // MOON Blue-Purple
+    fontWeight: '600',
+    whiteSpace: 'nowrap', 
   },
   statDivider: {
     width: '1px',
@@ -470,7 +502,7 @@ const styles = {
   detailContainer: {
     background: "rgba(33, 6, 53, 0.98)", // Deep Navy solid feel
     borderRadius: "32px",
-    padding: "clamp(2rem, 5vw, 4rem)", // Responsive padding
+    padding: "clamp(2rem, 5vw, 4rem)", 
     marginTop: "40px",
     border: "2px solid #7B337E", // Vibrant Purple accent
     boxShadow: "0 0 30px rgba(123, 51, 126, 0.3)",
