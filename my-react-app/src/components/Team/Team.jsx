@@ -485,11 +485,11 @@ const styles = {
   statNumber: {
     fontSize: 'clamp(2.5rem, 4vw, 3.5rem)',
     fontWeight: '800',
-    color: '#7B337E', // MOON Vibrant Purple
+    color: 'white', // MOON Vibrant Purple
   },
   statLabel: {
     fontSize: '0.9rem',
-    color: '#6667AB', // MOON Blue-Purple
+    color: 'white', // MOON Blue-Purple
     fontWeight: '600',
     whiteSpace: 'nowrap', 
   },

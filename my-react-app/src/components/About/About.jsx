@@ -186,19 +186,6 @@ function About() {
           >
             Schedule Consultation
           </button>
-          <button 
-            style={styles.secondaryButton}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#210635';
-              e.currentTarget.style.borderColor = '#6667AB';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'white';
-              e.currentTarget.style.borderColor = '#cbd5e1';
-            }}
-          >
-            View Case Studies
-          </button>
         </div>
       </div>
     </section>

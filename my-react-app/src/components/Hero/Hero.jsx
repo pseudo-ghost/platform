@@ -169,12 +169,12 @@ function HomePage() {
               <p className="trust-label">Built for organizations across industries</p>
               <div className="industry-grid">
                 {[
-                  { icon: <BsFileEarmarkBarGraph></BsFileEarmarkBarGraph>, label: 'Healthcare' },
-                  { icon: <LuHammer></LuHammer>, label: 'Manufacturing' },
-                  { icon: <FaUserGraduate></FaUserGraduate>, label: 'Education' },
-                  { icon: <FaBriefcase></FaBriefcase>, label: 'Professional Services' },
-                  { icon: <FaBoxOpen></FaBoxOpen>, label: 'Retail' },
-                  { icon: <IoIosWifi></IoIosWifi>, label: 'Technology' }
+                  { icon: <BsFileEarmarkBarGraph></BsFileEarmarkBarGraph>, label: ' Healthcare' },
+                  { icon: <LuHammer></LuHammer>, label: ' Manufacturing' },
+                  { icon: <FaUserGraduate></FaUserGraduate>, label: ' Education' },
+                  { icon: <FaBriefcase></FaBriefcase>, label: ' Professional Services' },
+                  { icon: <FaBoxOpen></FaBoxOpen>, label: ' Retail' },
+                  { icon: <IoIosWifi></IoIosWifi>, label: ' Technology' }
                 ].map((industry, index) => (
                   <div 
                     key={industry.label}
@@ -243,18 +243,21 @@ function HomePage() {
                   </div>
                 </div>
                 
-                <div className="feature-badge badge1" data-parallax data-speed="0.3">
-                  <span className="feature-icon">📊</span>
-                  <span className="feature-text">Analytics</span>
-                </div>
-                <div className="feature-badge badge2" data-parallax data-speed="0.25">
-                  <span className="feature-icon">👥</span>
-                  <span className="feature-text">Team Mgmt</span>
-                </div>
-                <div className="feature-badge badge3" data-parallax data-speed="0.35">
-                  <span className="feature-icon">🔄</span>
-                  <span className="feature-text">Integrations</span>
-                </div>
+                <div className="dashboard-badges">
+  <div className="feature-badge">
+    <span className="feature-icon">📊</span>
+    <span className="feature-text">Analytics</span>
+  </div>
+  <div className="feature-badge">
+    <span className="feature-icon">👥</span>
+    <span className="feature-text">Team Mgmt</span>
+  </div>
+  <div className="feature-badge">
+    <span className="feature-icon">🔄</span>
+    <span className="feature-text">Integrations</span>
+  </div>
+</div>
+
               </div>
             </div>
           )}
@@ -585,11 +588,34 @@ const styles = `
   font-weight: 500;
 }
 
-.dashboard-container {
-  flex: 1;
-  max-width: min(100%, 600px);
-  position: relative;
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
 }
+.dashboard-badges {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.feature-badge {
+  background-color: #f8fafc;
+  color: #1e293b;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 
 @media (max-width: 1024px) {
   .dashboard-container {
@@ -606,12 +632,13 @@ const styles = `
 }
 
 .dashboard-card {
-  background-color: rgba(33, 6, 53, 0.8);
+  background-color: #ffffff;
   border-radius: 1.25rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
   padding: clamp(1.25rem, 2vw, 1.5rem);
-  border: 1px solid rgba(102, 103, 171, 0.3);
+  border: 1px solid #e5e7eb;
 }
+
 
 .dashboard-header {
   display: flex;
