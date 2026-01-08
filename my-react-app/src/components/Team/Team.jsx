@@ -315,7 +315,7 @@ function Team() {
 const styles = {
   section: {
     padding: "80px 20px",
-    background: "#210635", // MOON Deep Navy
+    background: "#6667AB", // MOON Deep Navy
     color: "#F5D5E0",      // MOON Soft Pink
     minHeight: "100vh",
     fontFamily: "'Inter', sans-serif",
@@ -335,7 +335,7 @@ const styles = {
   },
   heroSubtitle: {
     fontSize: 'clamp(1.125rem, 2vw, 1.25rem)',
-    color: "#6667AB", // MOON Blue-Purple
+    color: "#210635", // MOON Blue-Purple
     lineHeight: '1.7',
     maxWidth: '700px',
     margin: '0 auto',
@@ -393,7 +393,7 @@ const styles = {
   },
   founderRole: {
     fontSize: '1rem',
-    color: '#7B337E', // MOON Vibrant Purple
+    color: '#210635', // MOON Vibrant Purple
     fontWeight: '600',
     marginBottom: '1.25rem',
   },
@@ -416,7 +416,7 @@ const styles = {
   },
   educationText: {
     fontSize: '0.875rem',
-    color: '#6667AB',
+    color: '#210635F',
     lineHeight: '1.5',
   },
   expertiseContainer: {
@@ -454,7 +454,7 @@ const styles = {
   },
   statLabel: {
     fontSize: '0.9375rem',
-    color: '#6667AB',
+    color: 'white',
     marginTop: '0.75rem',
     textAlign: 'center',
     fontWeight: '500',
