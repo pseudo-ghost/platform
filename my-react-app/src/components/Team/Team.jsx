@@ -7,15 +7,15 @@ function Team() {
 
   const founders = [
     {
-      name: "Faadhil Mohiadeen",
+      name: "Faadhil",
       role: "CEO & Co-Founder",
-      photo: "/images/faadhil.jpg",
+      photo: "/Faadhil.jpeg",
       description: "Strategic vision and business development leader with 8+ years in educational technology. Passionate about making enterprise learning accessible and effective for organizations of all sizes.",
       education: "Bachelor of Computer Science, Universiti Sains Malaysia",
       expertise: ["Business Strategy", "EdTech Innovation", "Enterprise Sales"],
       social: {
         linkedin: "#",
-        email: "faadhil@skillforge.com"
+        email: "faadhil@luminasystems.com"
       },
       location: "Bayan Lepas, Penang",
       joined: "January 2024",
@@ -25,13 +25,13 @@ function Team() {
     {
       name: "Leena",
       role: "CTO & Co-Founder",
-      photo: "/images/leena.jpg",
+      photo: "/Leena.jpeg",
       description: "Technical architect and platform engineer. Leads the development of SkillForge's scalable learning infrastructure with expertise in building enterprise-grade systems.",
       education: "Bachelor of Computer Science, Universiti Sains Malaysia",
       expertise: ["Platform Architecture", "API Development", "System Scalability"],
       social: {
         linkedin: "#",
-        email: "leena@skillforge.com"
+        email: "leena@luminasystems.com"
       },
       location: "Bayan Lepas, Penang",
       joined: "January 2024",
@@ -41,13 +41,13 @@ function Team() {
     {
       name: "Parisa",
       role: "Chief Learning Officer & Co-Founder",
-      photo: "/images/parisa.jpg",
+      photo: "/Parisa.jpeg",
       description: "Learning experience designer and product strategist. Focuses on creating intuitive, learner-centered platforms that drive measurable outcomes for organizations.",
       education: "Bachelor of Computer Science, Universiti Sains Malaysia",
       expertise: ["Learning Design", "UX Strategy", "Product Development"],
       social: {
         linkedin: "#",
-        email: "parisa@skillforge.com"
+        email: "parisa@luminasystems.com"
       },
       location: "Bayan Lepas, Penang",
       joined: "January 2024",
@@ -295,65 +295,14 @@ function Team() {
 
                   {/* Expertise Section */}
                   <div style={styles.expertiseDetail}>
-                    <h3 style={styles.expertiseTitle}>Expertise</h3>
-                    <div style={styles.expertiseTagsDetail}>
-                      {founder.expertise.map((skill) => (
-                        <span key={skill} style={styles.expertiseTagDetail}>
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
+                    
+                    
                   </div>
                 </div>
 
                 <div style={styles.detailRight}>
                   {/* Contact Information */}
-                  <div style={styles.contactSection}>
-                    <h3 style={styles.contactTitle}>Contact Information</h3>
-                    <div style={styles.contactInfo}>
-                      <div style={styles.contactItem}>
-                        <span style={styles.contactLabel}>Email</span>
-                        <a 
-                          href={`mailto:${founder.social.email}`} 
-                          style={styles.contactValue}
-                        >
-                          {founder.social.email}
-                        </a>
-                      </div>
-                      <div style={styles.contactItem}>
-                        <span style={styles.contactLabel}>Phone</span>
-                        <a 
-                          href={`tel:${founder.phone}`} 
-                          style={styles.contactValue}
-                        >
-                          {founder.phone}
-                        </a>
-                      </div>
-                    </div>
-
-                    {/* Social Links */}
-                    <div style={styles.socialSectionDetail}>
-                      <span style={styles.socialLabel}>Social</span>
-                      <div style={styles.socialLinksDetail}>
-                        <a 
-                          href={founder.social.linkedin} 
-                          style={styles.socialLinkDetail}
-                          aria-label={`${founder.name}'s LinkedIn`}
-                        >
-                          {getSocialIcon('linkedin')}
-                          <span style={styles.socialText}>LinkedIn</span>
-                        </a>
-                        <a 
-                          href={`https://github.com/${founder.github}`} 
-                          style={styles.socialLinkDetail}
-                          aria-label={`${founder.name}'s GitHub`}
-                        >
-                          {getSocialIcon('github')}
-                          <span style={styles.socialText}>GitHub</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             )
@@ -363,14 +312,13 @@ function Team() {
     </section>
   );
 }
-
-// Styles - Updated to match your friend's exact style
 const styles = {
   section: {
-    minHeight: '100vh',
-    background: '#ffffff',
-    padding: 'clamp(4rem, 6vw, 6rem) clamp(1.5rem, 4vw, 2rem)',
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    padding: "80px 20px",
+    background: "#210635", // MOON Deep Navy
+    color: "#F5D5E0",      // MOON Soft Pink
+    minHeight: "100vh",
+    fontFamily: "'Inter', sans-serif",
   },
   hero: {
     textAlign: 'center',
@@ -379,16 +327,15 @@ const styles = {
     margin: '0 auto clamp(3rem, 5vw, 5rem)',
   },
   heroTitle: {
-    fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
-    fontWeight: '800',
-    color: '#1e293b',
-    marginBottom: '1.5rem',
-    lineHeight: '1.1',
-    letterSpacing: '-0.02em',
+    fontSize: "3rem",
+    fontWeight: "800",
+    color: "#F5D5E0", 
+    textAlign: "center",
+    marginBottom: "20px",
   },
   heroSubtitle: {
     fontSize: 'clamp(1.125rem, 2vw, 1.25rem)',
-    color: '#64748b',
+    color: "#6667AB", // MOON Blue-Purple
     lineHeight: '1.7',
     maxWidth: '700px',
     margin: '0 auto',
@@ -401,83 +348,59 @@ const styles = {
     margin: '0 auto 4rem',
   },
   founderCard: {
-    background: '#ffffff',
-    borderRadius: '1.25rem',
-    overflow: 'hidden',
-    border: '1px solid #e2e8f0',
-    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+    background: "rgba(66, 13, 75, 0.4)", // MOON Translucent Purple
+    backdropFilter: "blur(10px)",
+    borderRadius: "24px",
+    padding: "30px",
+    border: "1px solid rgba(245, 213, 224, 0.1)",
+    cursor: "pointer",
+    transition: "all 0.3s ease",
     position: 'relative',
-    cursor: 'pointer',
-  },
-  selectedRing: {
-    position: 'absolute',
-    top: '-3px',
-    left: '-3px',
-    right: '-3px',
-    bottom: '-3px',
-    border: '3px solid #3b82f6',
-    borderRadius: '1.5rem',
-    zIndex: 1,
-    pointerEvents: 'none',
   },
   photoContainer: {
     position: 'relative',
     height: '280px',
     overflow: 'hidden',
-  },
-  photoPlaceholder: {
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  initials: {
-    fontSize: '4rem',
-    fontWeight: '800',
-    color: '#ffffff',
-    letterSpacing: '0.1em',
+    borderRadius: '16px',
+    marginBottom: '1.5rem',
   },
   roleBadge: {
     position: 'absolute',
     bottom: '1rem',
     left: '1rem',
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    backgroundColor: "rgba(33, 6, 53, 0.8)", // Darker glass
     backdropFilter: 'blur(10px)',
     padding: '0.625rem 1rem',
     borderRadius: '2rem',
     display: 'flex',
     alignItems: 'center',
     gap: '0.5rem',
-    border: '1px solid rgba(226, 232, 240, 0.8)',
-  },
-  roleIcon: {
-    fontSize: '1.125rem',
+    border: '1px solid rgba(245, 213, 224, 0.2)',
   },
   roleBadgeText: {
     fontSize: '0.875rem',
     fontWeight: '600',
-    color: '#1e293b',
+    color: '#F5D5E0',
   },
   infoContainer: {
-    padding: '2rem',
+    textAlign: 'left',
   },
   founderName: {
     fontSize: '1.5rem',
     fontWeight: '700',
-    color: '#1e293b',
+    color: '#F5D5E0',
     marginBottom: '0.25rem',
-    lineHeight: '1.2',
   },
   founderRole: {
     fontSize: '1rem',
-    color: '#3b82f6',
+    color: '#7B337E', // MOON Vibrant Purple
     fontWeight: '600',
     marginBottom: '1.25rem',
   },
   founderDescription: {
     fontSize: '0.9375rem',
-    color: '#475569',
+    color: '#F5D5E0',
+    opacity: 0.8,
     lineHeight: '1.7',
     marginBottom: '1.5rem',
   },
@@ -487,18 +410,13 @@ const styles = {
     gap: '0.75rem',
     marginBottom: '1.5rem',
     padding: '1rem',
-    backgroundColor: '#f8fafc',
+    backgroundColor: 'rgba(102, 103, 171, 0.1)',
     borderRadius: '0.75rem',
-    border: '1px solid #e2e8f0',
-  },
-  educationIcon: {
-    fontSize: '1.25rem',
-    flexShrink: 0,
-    color: '#3b82f6',
+    border: '1px solid rgba(245, 213, 224, 0.1)',
   },
   educationText: {
     fontSize: '0.875rem',
-    color: '#475569',
+    color: '#6667AB',
     lineHeight: '1.5',
   },
   expertiseContainer: {
@@ -508,14 +426,12 @@ const styles = {
     marginBottom: '1.5rem',
   },
   expertiseTag: {
-    backgroundColor: '#eff6ff',
-    color: '#1d4ed8',
-    padding: '0.5rem 0.875rem',
-    borderRadius: '0.5rem',
-    fontSize: '0.8125rem',
-    fontWeight: '500',
-    border: '1px solid #dbeafe',
-    whiteSpace: 'nowrap',
+    background: "rgba(102, 103, 171, 0.2)",
+    color: "#F5D5E0",
+    padding: "6px 12px",
+    borderRadius: "20px",
+    fontSize: "0.8rem",
+    border: "1px solid rgba(245, 213, 224, 0.1)",
   },
   statsSection: {
     display: 'flex',
@@ -526,25 +442,19 @@ const styles = {
     maxWidth: '900px',
     margin: '0 auto 4rem',
     padding: '3rem 2rem',
-    backgroundColor: '#f8fafc',
+    backgroundColor: "rgba(66, 13, 75, 0.2)",
     borderRadius: '1.25rem',
-    border: '1px solid #e2e8f0',
-  },
-  statCard: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    minWidth: '140px',
+    border: '1px solid rgba(245, 213, 224, 0.1)',
   },
   statNumber: {
     fontSize: 'clamp(2.5rem, 4vw, 3rem)',
     fontWeight: '800',
-    color: '#3b82f6',
+    color: '#7B337E',
     lineHeight: '1',
   },
   statLabel: {
     fontSize: '0.9375rem',
-    color: '#64748b',
+    color: '#6667AB',
     marginTop: '0.75rem',
     textAlign: 'center',
     fontWeight: '500',
@@ -552,171 +462,151 @@ const styles = {
   statDivider: {
     width: '1px',
     height: '4rem',
-    backgroundColor: '#e2e8f0',
+    backgroundColor: 'rgba(245, 213, 224, 0.1)',
   },
-  // Detailed View Styles
+ 
   detailContainer: {
-    maxWidth: '1200px',
-    margin: '0 auto 4rem',
-    backgroundColor: '#ffffff',
-    borderRadius: '1.25rem',
-    boxShadow: '0 20px 60px rgba(0, 0, 0, 0.1)',
-    border: '1px solid #e2e8f0',
-    overflow: 'hidden',
+    background: "rgba(33, 6, 53, 0.98)", // Deep Navy solid feel
+    borderRadius: "32px",
+    padding: "clamp(2rem, 5vw, 4rem)", // Responsive padding
+    marginTop: "40px",
+    border: "2px solid #7B337E", // Vibrant Purple accent
+    boxShadow: "0 0 30px rgba(123, 51, 126, 0.3)",
+    animation: "slideDown 0.4s ease-out forwards",
   },
-  detailContent: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '3rem',
-    padding: '3rem',
-  },
-  '@media (min-width: 768px)': {
-    detailContent: {
-      flexDirection: 'row',
-    },
-  },
-  detailLeft: {
-    flex: 2,
-  },
-  detailRight: {
-    flex: 1,
-  },
+  
   detailName: {
-    fontSize: '2.5rem',
-    fontWeight: '800',
-    color: '#1e293b',
-    marginBottom: '0.5rem',
-    lineHeight: '1.2',
+    fontSize: "clamp(2rem, 4vw, 3rem)",
+    fontWeight: "800",
+    color: "#F5D5E0", // Soft Pink
+    marginBottom: "0.5rem",
   },
+
   detailRole: {
-    fontSize: '1.25rem',
-    color: '#3b82f6',
-    fontWeight: '600',
-    marginBottom: '1.5rem',
+    fontSize: "1.25rem",
+    color: "#7B337E", // Vibrant Purple
+    fontWeight: "600",
+    marginBottom: "1.5rem",
   },
-  detailDescription: {
-    fontSize: '1.125rem',
-    color: '#475569',
-    lineHeight: '1.7',
-    marginBottom: '2rem',
-  },
+
+  
   backgroundSection: {
-    marginBottom: '2rem',
+    marginTop: "2.5rem",
+    borderTop: "1px solid rgba(245, 213, 224, 0.1)",
+    paddingTop: "2rem",
   },
+
   backgroundTitle: {
-    fontSize: '1.25rem',
-    fontWeight: '600',
-    color: '#1e293b',
-    marginBottom: '1.5rem',
+    fontSize: "1.25rem",
+    fontWeight: "700",
+    color: "#F5D5E0",
+    marginBottom: "1.5rem",
   },
+
   backgroundGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    gap: '1.5rem',
+    display: "flex",
+    flexDirection: "column",
+    gap: "1.5rem", // Adds vertical space between items
   },
+
   backgroundItem: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '0.5rem',
+    display: "flex",
+    flexDirection: "column", // Stack label on top of value
+    gap: "0.5rem", // Space between label and value
   },
+
   backgroundLabel: {
-    fontSize: '0.875rem',
-    color: '#64748b',
-    fontWeight: '500',
+    fontSize: "0.875rem",
+    color: "#6667AB", // Blue-Purple
+    fontWeight: "600",
+    textTransform: "uppercase",
+    letterSpacing: "1px",
   },
+
   backgroundValue: {
-    fontSize: '1rem',
-    color: '#1e293b',
-    fontWeight: '500',
+    fontSize: "1.1rem",
+    color: "#F5D5E0",
+    fontWeight: "500",
   },
+
+  // FIX: Expertise tags layout
   expertiseDetail: {
-    marginBottom: '2rem',
+    marginTop: "2.5rem",
   },
+
   expertiseTitle: {
-    fontSize: '1.25rem',
-    fontWeight: '600',
-    color: '#1e293b',
-    marginBottom: '1.5rem',
+    fontSize: "1.25rem",
+    fontWeight: "700",
+    color: "#F5D5E0",
+    marginBottom: "1.25rem",
   },
+
   expertiseTagsDetail: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '0.75rem',
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "0.75rem", // Adds space between the purple boxes
   },
+
   expertiseTagDetail: {
-    backgroundColor: '#eff6ff',
-    color: '#1d4ed8',
-    padding: '0.75rem 1.25rem',
-    borderRadius: '0.75rem',
-    fontSize: '1rem',
-    fontWeight: '500',
-    border: '1px solid #dbeafe',
+    backgroundColor: "rgba(123, 51, 126, 0.2)",
+    color: "#F5D5E0",
+    padding: "0.75rem 1.25rem",
+    borderRadius: "12px",
+    fontSize: "0.95rem",
+    fontWeight: "500",
+    border: "1px solid rgba(123, 51, 126, 0.3)",
   },
+
+  // CONTACT SECTION FIXES
   contactSection: {
-    backgroundColor: '#f8fafc',
-    borderRadius: '1rem',
-    padding: '2rem',
-    border: '1px solid #e2e8f0',
+    marginTop: "3rem",
+    padding: "2rem",
+    backgroundColor: "rgba(66, 13, 75, 0.3)",
+    borderRadius: "20px",
+    border: "1px solid rgba(245, 213, 224, 0.1)",
   },
-  contactTitle: {
-    fontSize: '1.25rem',
-    fontWeight: '600',
-    color: '#1e293b',
-    marginBottom: '1.5rem',
-  },
-  contactInfo: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '1.25rem',
-    marginBottom: '2rem',
-  },
+
   contactItem: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '0.5rem',
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginBottom: "1.25rem",
   },
+
   contactLabel: {
-    fontSize: '0.875rem',
-    color: '#64748b',
-    fontWeight: '500',
+    width: "80px", // Keeps labels aligned
+    color: "#6667AB",
+    fontWeight: "600",
   },
+
   contactValue: {
-    fontSize: '1rem',
-    color: '#3b82f6',
-    fontWeight: '500',
-    textDecoration: 'none',
-    transition: 'color 0.2s ease',
+    color: "#F5D5E0",
+    textDecoration: "none",
+    transition: "color 0.2s ease",
   },
-  socialSectionDetail: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '1rem',
-  },
-  socialLabel: {
-    fontSize: '0.875rem',
-    color: '#64748b',
-    fontWeight: '500',
-  },
-  socialLinksDetail: {
-    display: 'flex',
-    gap: '1rem',
-  },
+
   socialLinkDetail: {
     display: 'flex',
     alignItems: 'center',
     gap: '0.5rem',
-    color: '#475569',
+    color: '#F5D5E0',
     textDecoration: 'none',
     padding: '0.75rem 1rem',
-    backgroundColor: '#ffffff',
+    backgroundColor: "rgba(102, 103, 171, 0.2)",
     borderRadius: '0.75rem',
-    border: '1px solid #e2e8f0',
+    border: '1px solid rgba(245, 213, 224, 0.1)',
     transition: 'all 0.2s ease',
   },
-  socialText: {
-    fontSize: '0.875rem',
-    fontWeight: '500',
-  },
+
+  /* GROUPED MEDIA QUERY TO FIX DUPLICATE KEY WARNING */
+  '@media (min-width: 768px)': {
+    detailContent: {
+      flexDirection: 'row',
+    },
+    detailName: {
+      fontSize: '2.5rem',
+    }
+  }
 };
 
 export default Team;

@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { TbHealthRecognition } from "react-icons/tb";
+import { FaBuilding,  FaPlusCircle } from "react-icons/fa";
+
 
 function Features() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -14,7 +17,7 @@ function Features() {
       metric: "60%",
       metricLabel: "Time Saved",
       color: "#3b82f6",
-      icon: "🏥"
+      icon: <TbHealthRecognition></TbHealthRecognition>
     },
     {
       id: 2,
@@ -26,7 +29,7 @@ function Features() {
       metric: "6x",
       metricLabel: "Growth",
       color: "#f59e0b",
-      icon: "🎓"
+      icon: <FaBuilding></FaBuilding>
     },
     {
       id: 3,
@@ -38,7 +41,7 @@ function Features() {
       metric: "2 weeks",
       metricLabel: "Faster",
       color: "#10b981",
-      icon: "🏭"
+      icon: <FaPlusCircle></FaPlusCircle>
     },
   ];
 

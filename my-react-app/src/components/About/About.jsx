@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { MdLoop } from "react-icons/md";
+import { BsFileBarGraph } from "react-icons/bs";
+import { FaRegHandshake, FaShieldAlt } from "react-icons/fa";
+import { FiTarget } from "react-icons/fi";
+import { CiSettings } from "react-icons/ci";
 
 function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,7 +50,7 @@ function About() {
             style={styles.visualCardGlow}
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-            ><div style={styles.visualIcon}>🎯</div>
+            ><div style={styles.visualIcon}><FiTarget></FiTarget></div>
             <h3 style={styles.visualTitle}>Purpose-Driven Design</h3>
             <p style={styles.visualText}>Every feature addresses real organizational learning challenges</p>
             </div>
@@ -55,7 +60,7 @@ function About() {
             style={styles.visualCardGlow}
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-            ><div style={styles.visualIcon}>⚙️</div>
+            ><div style={styles.visualIcon}><CiSettings></CiSettings></div>
             <h3 style={styles.visualTitle}>Scalable Architecture</h3>
             <p style={styles.visualText}>Grow from 50 to 50,000 users without platform changes</p>
             </div>
@@ -208,7 +213,7 @@ const valuesData = [
     description: "We build platforms that evolve with your organization's changing needs, avoiding rigid solutions that become obsolete.",
     color: "#3b82f6",
     bgColor: "rgba(59, 130, 246, 0.08)",
-    icon: "🔄"
+    icon: <MdLoop></MdLoop>
   },
   {
     id: 2,
@@ -216,7 +221,7 @@ const valuesData = [
     description: "Every feature is grounded in learning science and usability research, ensuring effectiveness and adoption.",
     color: "#10b981",
     bgColor: "rgba(16, 185, 129, 0.08)",
-    icon: "📊"
+    icon: <BsFileBarGraph></BsFileBarGraph>
   },
   {
     id: 3,
@@ -224,7 +229,7 @@ const valuesData = [
     description: "We see ourselves as long-term partners in your success, not just software vendors.",
     color: "#8b5cf6",
     bgColor: "rgba(139, 92, 246, 0.08)",
-    icon: "🤝"
+    icon: <FaRegHandshake></FaRegHandshake>
   },
   {
     id: 4,
@@ -232,7 +237,7 @@ const valuesData = [
     description: "Built with the security, scalability, and support that organizations require for mission-critical training.",
     color: "#f59e0b",
     bgColor: "rgba(245, 158, 11, 0.08)",
-    icon: "🛡️"
+    icon: <FaShieldAlt></FaShieldAlt>
   }
 ];
 

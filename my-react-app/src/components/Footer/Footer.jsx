@@ -1,5 +1,13 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { FaInstagram, FaLinkedin, FaWrench } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
+import { CiGlobe } from "react-icons/ci";
+import { FaGears } from "react-icons/fa6";
+import { GoGraph } from "react-icons/go";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { MdEmail } from "react-icons/md";
+import { IoPin } from "react-icons/io5";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -41,7 +49,7 @@ function Footer() {
           <h4 style={styles.heading}>Quick Links</h4>
           <ul style={styles.list} role="list">
             <li style={styles.listItem}>
-              <a href="#about" style={styles.link} aria-label="About SkillForge">About Us</a>
+              <a href="#about" style={styles.link} aria-label="About Us">About Us</a>
             </li>
             <li style={styles.listItem}>
               <a href="#features" style={styles.link} aria-label="Features ">Features</a>
@@ -57,23 +65,15 @@ function Footer() {
           <h4 style={styles.heading}>Our Platform</h4>
           <ul style={styles.list} role="list">
             <li style={styles.listItem}>
-              <span style={styles.featureIcon}>📚</span>
-              <span>Online Courses</span>
+              <span style={styles.featureIcon}><FaGears></FaGears></span>
+              <span>Learning Management Systems</span>
             </li>
             <li style={styles.listItem}>
-              <span style={styles.featureIcon}>🚀</span>
-              <span>Skill Development</span>
-            </li>
-            <li style={styles.listItem}>
-              <span style={styles.featureIcon}>📈</span>
+              <span style={styles.featureIcon}><GoGraph></GoGraph></span>
               <span>Progress Tracking</span>
             </li>
             <li style={styles.listItem}>
-              <span style={styles.featureIcon}>🏆</span>
-              <span>Certificates</span>
-            </li>
-            <li style={styles.listItem}>
-              <span style={styles.featureIcon}>🤖</span>
+              <span style={styles.featureIcon}><GiArtificialIntelligence></GiArtificialIntelligence></span>
               <span>AI Learning Support</span>
             </li>
           </ul>
@@ -84,7 +84,7 @@ function Footer() {
           <h4 style={styles.heading}>Contact</h4>
           <div style={styles.contactInfo}>
             <div style={styles.contactItem}>
-              <span style={styles.contactIcon}>✉️</span>
+              <span style={styles.contactIcon}><MdEmail></MdEmail></span>
               <a 
                 href="mailto:info@luminasystems.com" 
                 style={styles.contactLink}
@@ -94,7 +94,7 @@ function Footer() {
               </a>
             </div>
             <div style={styles.contactItem}>
-              <span style={styles.contactIcon}>📍</span>
+              <span style={styles.contactIcon}><IoPin></IoPin></span>
               <span>Malaysia</span>
             </div>
           </div>
@@ -108,7 +108,7 @@ function Footer() {
                 style={styles.socialLink}
                 aria-label="Visit LuminaSystems website"
               >
-                <span style={styles.socialIcon}>🌐</span>
+                <span style={styles.socialIcon}><CiGlobe></CiGlobe></span>
                 <span style={styles.socialLabel}>Website</span>
               </a>
               <a 
@@ -116,7 +116,7 @@ function Footer() {
                 style={styles.socialLink}
                 aria-label="Follow LuminaSystems on Twitter"
               >
-                <span style={styles.socialIcon}>🐦</span>
+                <span style={styles.socialIcon}><RiTwitterXFill></RiTwitterXFill></span>
                 <span style={styles.socialLabel}>Twitter</span>
               </a>
               <a 
@@ -124,7 +124,7 @@ function Footer() {
                 style={styles.socialLink}
                 aria-label="Follow LuminaSystemsLuminaSystems on Instagram"
               >
-                <span style={styles.socialIcon}>📸</span>
+                <span style={styles.socialIcon}><FaInstagram></FaInstagram></span>
                 <span style={styles.socialLabel}>Instagram</span>
               </a>
               <a 
@@ -132,7 +132,7 @@ function Footer() {
                 style={styles.socialLink}
                 aria-label="Follow LuminaSystems on LinkedIn"
               >
-                <span style={styles.socialIcon}>💼</span>
+                <span style={styles.socialIcon}><FaLinkedin></FaLinkedin></span>
                 <span style={styles.socialLabel}>LinkedIn</span>
               </a>
             </div>
@@ -161,7 +161,7 @@ function Footer() {
 
 const styles = {
   footer: {
-    backgroundColor: "#0f172a",
+    backgroundColor: "#210635",
     color: "#e5e7eb",
     padding: "0",
     marginTop: "clamp(3rem, 6vw, 6rem)",
@@ -392,7 +392,7 @@ const styles = {
   
   // Bottom section
   bottomContainer: {
-    borderTop: "1px solid #334155",
+    borderTop: "1px solid #210635",
     padding: "clamp(1.5rem, 3vw, 2rem) clamp(1.5rem, 4vw, 2rem)",
     backgroundColor: "rgba(15, 23, 42, 0.9)",
   },

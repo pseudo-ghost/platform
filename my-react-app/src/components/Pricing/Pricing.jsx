@@ -15,172 +15,133 @@ const Pricing = () => {
     </svg>
   );
 
-  const styles = {
-    container: {
-      padding: '80px 20px',
-      background: 'linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%)', 
-      color: '#ffffff',
-      textAlign: 'center',
-      fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif"
-    },
-    title: {
-      fontSize: '2.5rem',
-      marginBottom: '16px',
-      color: '#ffb703',
-      fontWeight: '700',
-      letterSpacing: '-0.02em'
-    },
-    subtitle: {
-      fontSize: '1.1rem',
-      marginBottom: '40px',
-      color: '#e0e0e0',
-      maxWidth: '800px',
-      margin: '0 auto 50px',
-      lineHeight: '1.6'
-    },
-    glassWrapper: {
-      maxWidth: '1200px',
-      margin: '0 auto',
-      background: 'rgba(255, 255, 255, 0.03)', 
-      backdropFilter: 'blur(10px)', 
-      WebkitBackdropFilter: 'blur(10px)', 
-      borderRadius: '20px',
-      padding: '50px 30px',
-      border: '1px solid rgba(255, 255, 255, 0.1)',
-      boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
-      overflowX: 'auto'
-    },
-    table: {
-      width: '100%',
-      borderCollapse: 'collapse',
-      marginTop: '20px'
-    },
-    th: {
-      padding: '25px 15px',
-      fontSize: '1.3rem',
-      fontWeight: '600',
-      borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
-    },
-    td: {
-      padding: '20px 15px',
-      transition: 'all 0.3s ease',
-      borderBottom: '1px solid rgba(255, 255, 255, 0.05)'
-    },
-    planHeader: {
-      textAlign: 'center',
-      paddingBottom: '15px',
-      position: 'relative'
-    },
-    popularBadge: {
-      background: 'linear-gradient(90deg, #ffb703, #ff9e00)',
-      color: '#0d1b2a',
-      padding: '8px 20px',
-      borderRadius: '20px',
-      fontSize: '0.9rem',
-      fontWeight: '700',
-      display: 'inline-block',
-      marginBottom: '15px',
-      letterSpacing: '0.5px'
-    },
-    priceDisplay: {
-      fontSize: '2.5rem',
-      fontWeight: '700',
-      color: '#ffb703',
-      margin: '15px 0',
-      letterSpacing: '-0.02em'
-    },
-    priceUnit: {
-      fontSize: '1rem',
-      color: '#b0b0b0',
-      marginLeft: '5px',
-      fontWeight: '400'
-    },
-    billingToggle: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '15px',
-      marginBottom: '50px',
-      background: 'rgba(255, 255, 255, 0.05)',
-      padding: '10px',
-      borderRadius: '50px',
-      maxWidth: '400px',
-      margin: '0 auto 40px'
-    },
-    toggleOption: {
-      padding: '12px 30px',
-      borderRadius: '25px',
-      cursor: 'pointer',
-      fontWeight: '600',
-      transition: 'all 0.3s ease',
-      fontSize: '1rem'
-    },
-    ctaButton: {
-      background: 'linear-gradient(90deg, #ffb703, #ff9e00)',
-      color: '#0d1b2a',
-      border: 'none',
-      padding: '14px 30px',
-      borderRadius: '8px',
-      fontSize: '1rem',
-      fontWeight: '600',
-      cursor: 'pointer',
-      transition: 'all 0.3s ease',
-      marginTop: '15px',
-      width: '100%',
-      maxWidth: '220px'
-    },
-    secondaryButton: {
-      background: 'transparent',
-      color: '#ffb703',
-      border: '2px solid #ffb703',
-      padding: '12px 25px',
-      borderRadius: '8px',
-      fontSize: '1rem',
-      fontWeight: '600',
-      cursor: 'pointer',
-      transition: 'all 0.3s ease',
-      marginTop: '15px',
-      width: '100%',
-      maxWidth: '220px'
-    },
-    enterpriseButton: {
-      background: 'transparent',
-      color: '#2196F3',
-      border: '2px solid #2196F3',
-      padding: '12px 25px',
-      borderRadius: '8px',
-      fontSize: '1rem',
-      fontWeight: '600',
-      cursor: 'pointer',
-      transition: 'all 0.3s ease',
-      marginTop: '15px',
-      width: '100%',
-      maxWidth: '220px'
-    },
-    trustSection: {
-      marginTop: '60px',
-      paddingTop: '40px',
-      borderTop: '1px solid rgba(255, 255, 255, 0.1)'
-    },
-    trustItem: {
-      display: 'inline-flex',
-      alignItems: 'center',
-      margin: '0 20px',
-      color: '#b0b0b0',
-      fontSize: '0.95rem',
-      gap: '8px'
-    },
-    enterpriseNote: {
-      marginTop: '20px',
-      padding: '20px',
-      backgroundColor: 'rgba(33, 150, 243, 0.05)',
-      borderRadius: '12px',
-      border: '1px solid rgba(33, 150, 243, 0.2)',
-      textAlign: 'left',
-      maxWidth: '800px',
-      margin: '40px auto 0'
-    }
-  };
+ const styles = {
+  container: {
+    padding: '100px 20px',
+    background: '#210635', // MOON Deep Navy
+    color: '#F5D5E0',      // MOON Soft Pink text
+    textAlign: 'center',
+    fontFamily: "'Inter', sans-serif"
+  },
+  title: {
+    fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+    marginBottom: '20px',
+    color: '#F5D5E0',      // Soft Pink
+    fontWeight: '800',
+    letterSpacing: '-0.03em'
+  },
+  subtitle: {
+    fontSize: '1.1rem',
+    color: '#6667AB',      // MOON Blue-Purple
+    maxWidth: '700px',
+    margin: '0 auto 60px',
+    lineHeight: '1.7'
+  },
+  billingToggle: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: '10px',
+    background: 'rgba(102, 103, 171, 0.15)', 
+    padding: '8px',
+    borderRadius: '50px',
+    maxWidth: '320px',
+    margin: '0 auto 60px',
+    border: '1px solid rgba(245, 213, 224, 0.1)'
+  },
+  toggleOption: {
+    padding: '12px 24px',
+    borderRadius: '25px',
+    cursor: 'pointer',
+    fontWeight: '700',
+    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+    fontSize: '0.9rem',
+  
+  },
+  glassWrapper: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    background: 'rgba(66, 13, 75, 0.3)', 
+    backdropFilter: 'blur(15px)', 
+    WebkitBackdropFilter: 'blur(15px)', 
+    borderRadius: '24px',
+    padding: '40px 20px', 
+    border: '1px solid rgba(245, 213, 224, 0.1)',
+    boxShadow: '0 20px 50px rgba(0, 0, 0, 0.4)',
+    overflow: 'hidden' 
+  },
+  table: {
+    width: '100%',
+    borderCollapse: 'collapse',
+    tableLayout: 'fixed', 
+    minWidth: 'auto' 
+  },
+  th: {
+    padding: '20px 10px', 
+    fontSize: 'clamp(0.9rem, 1.5vw, 1.1rem)', 
+    fontWeight: '700',
+    color: '#F5D5E0',
+    borderBottom: '1px solid rgba(245, 213, 224, 0.1)'
+  },
+  td: {
+    padding: '15px 10px', 
+    color: '#6667AB',
+    fontSize: 'clamp(0.75rem, 1.2vw, 0.9rem)',
+    borderBottom: '1px solid rgba(102, 103, 171, 0.1)',
+    wordBreak: 'break-word' 
+  },
+  popularBadge: {
+    background: 'linear-gradient(90deg, #7B337E, #6667AB)', // Vibrant Purple gradient
+    color: '#F5D5E0',
+    padding: '6px 16px',
+    borderRadius: '20px',
+    fontSize: '0.75rem',
+    fontWeight: '800',
+    textTransform: 'uppercase',
+    marginBottom: '10px',
+    display: 'inline-block'
+  },
+  priceDisplay: {
+    fontSize: '1.5rem',
+    fontWeight: '800',
+    color: '#F5D5E0',
+    margin: '10px 0'
+  },
+  ctaButton: {
+    background: '#7B337E', // Theme Primary Purple
+    color: '#F5D5E0',
+    border: 'none',
+    padding: '16px 32px',
+    borderRadius: '12px',
+    fontSize: '1rem',
+    fontWeight: '700',
+    cursor: 'pointer',
+    transition: 'all 0.3s ease',
+    boxShadow: '0 8px 20px rgba(123, 51, 126, 0.3)',
+    width: '100%'
+  },
+  secondaryButton: {
+    background: 'transparent',
+    color: '#F5D5E0',
+    border: '2px solid rgba(123, 51, 126, 0.5)',
+    padding: '14px 28px',
+    borderRadius: '12px',
+    fontWeight: '700',
+    cursor: 'pointer',
+    transition: 'all 0.3s ease',
+    width: '100%'
+  },
+  enterpriseNote: {
+    marginTop: '60px',
+    padding: '30px',
+    backgroundColor: 'rgba(123, 51, 126, 0.1)',
+    borderRadius: '16px',
+    border: '1px solid rgba(123, 51, 126, 0.3)',
+    textAlign: 'center',
+    maxWidth: '900px',
+    margin: '60px auto 0'
+  }
+};
 
   const handleMouseEnter = (e) => {
     e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
@@ -225,7 +186,8 @@ const Pricing = () => {
       name: "Lumina Pro", 
       color: "#4CAF50", 
       description: "For small teams & departments starting with digital learning",
-      cta: "Schedule Demo"
+      cta: "Schedule Demo",
+      popular: false,
     },
     { 
       name: "Lumina Enterprise", 
@@ -238,6 +200,7 @@ const Pricing = () => {
       name: "Lumina Premium", 
       color: "#2196F3", 
       description: "Complete solution for large institutions & global enterprises",
+      popular: true,
       cta: "Contact Sales"
     }
   ];

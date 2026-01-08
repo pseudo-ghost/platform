@@ -1,4 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import { BsFileEarmarkBarGraph } from "react-icons/bs";
+import { LuHammer } from "react-icons/lu";
+import { FaUserGraduate, FaBriefcase, FaBoxOpen } from "react-icons/fa";
+import { IoIosWifi } from "react-icons/io";
 
 function HomePage() {
   const [hoveredButton, setHoveredButton] = useState(null);
@@ -165,12 +169,12 @@ function HomePage() {
               <p className="trust-label">Built for organizations across industries</p>
               <div className="industry-grid">
                 {[
-                  { icon: '🏥', label: 'Healthcare' },
-                  { icon: '🏭', label: 'Manufacturing' },
-                  { icon: '🎓', label: 'Education' },
-                  { icon: '💼', label: 'Professional Services' },
-                  { icon: '🏪', label: 'Retail' },
-                  { icon: '⚡', label: 'Technology' }
+                  { icon: <BsFileEarmarkBarGraph></BsFileEarmarkBarGraph>, label: 'Healthcare' },
+                  { icon: <LuHammer></LuHammer>, label: 'Manufacturing' },
+                  { icon: <FaUserGraduate></FaUserGraduate>, label: 'Education' },
+                  { icon: <FaBriefcase></FaBriefcase>, label: 'Professional Services' },
+                  { icon: <FaBoxOpen></FaBoxOpen>, label: 'Retail' },
+                  { icon: <IoIosWifi></IoIosWifi>, label: 'Technology' }
                 ].map((industry, index) => (
                   <div 
                     key={industry.label}

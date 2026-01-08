@@ -425,46 +425,47 @@ const styles = {
   },
 
   // CAPABILITIES
-  capabilitiesSection: {
-    backgroundColor: "#f8fafc",
-    padding: "60px 40px",
-  },
-  capabilitiesGrid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-    gap: "40px",
-  },
-  capabilityCategory: {
-    marginBottom: "20px",
-  },
-  categoryTitle: {
-    fontSize: "1.125rem",
-    fontWeight: "600",
-    color: "#1e293b",
-    marginBottom: "20px",
-    paddingBottom: "12px",
-    borderBottom: "2px solid #e2e8f0",
-  },
-  categoryList: {
-    listStyle: "none",
-    padding: "0",
-    margin: "0",
-  },
-  categoryItem: {
-    display: "flex",
-    alignItems: "flex-start",
-    gap: "12px",
-    marginBottom: "14px",
-    fontSize: "1rem",
-    color: "#475569",
-    lineHeight: "1.5",
-  },
-  checkIcon: {
-    color: "#10b981",
-    fontWeight: "600",
-    flexShrink: "0",
-    marginTop: "2px",
-  },
+capabilitiesSection: {
+  backgroundColor: "#210635", // MOON Deep Navy
+  padding: "60px 40px",
+  borderTop: "1px solid rgba(245, 213, 224, 0.1)", // Subtle divider
+},
+capabilitiesGrid: {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+  gap: "40px",
+},
+capabilityCategory: {
+  marginBottom: "20px",
+},
+categoryTitle: {
+  fontSize: "1.125rem",
+  fontWeight: "600",
+  color: "#F5D5E0", // Soft Pink heading
+  marginBottom: "20px",
+  paddingBottom: "12px",
+  borderBottom: "2px solid #7B337E", // Vibrant Purple underline
+},
+categoryList: {
+  listStyle: "none",
+  padding: "0",
+  margin: "0",
+},
+categoryItem: {
+  display: "flex",
+  alignItems: "flex-start",
+  gap: "12px",
+  marginBottom: "14px",
+  fontSize: "1rem",
+  color: "#6667AB", // Blue-Purple list items
+  lineHeight: "1.5",
+},
+checkIcon: {
+  color: "#7B337E", // Vibrant Purple checkmark
+  fontWeight: "600",
+  flexShrink: "0",
+  marginTop: "2px",
+},
 
   // PROCESS
   processSection: {
