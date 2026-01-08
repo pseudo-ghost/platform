@@ -197,7 +197,7 @@ const styles = {
   },
   subtitle: {
     fontSize: "1.125rem",
-    color: "#6667AB", 
+    color: "white", 
     maxWidth: "650px",
     margin: "0 auto",
     lineHeight: "1.6",
@@ -427,7 +427,7 @@ const styles = {
   },
   resultText: {
     fontSize: "0.9375rem",
-    color: "#6667AB",
+    color: "white",
     fontWeight: "500",
     margin: "0",
     lineHeight: "1.5",
