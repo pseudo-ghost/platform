@@ -46,8 +46,7 @@ function Features() {
     <section style={styles.section}>
       {/* Section Header */}
       <div style={styles.header}>
-        <span style={styles.badge}>Success Stories</span>
-        <h2 style={styles.title}>How Organizations Use SkillForge</h2>
+        <h2 style={styles.title}>How Organizations Use LuminaSystems</h2>
         <p style={styles.subtitle}>
           Real results from organizations that transformed their learning programs
         </p>
@@ -129,37 +128,16 @@ function Features() {
           </div>
         ))}
       </div>
-
-      {/* Bottom CTA */}
-      <div style={styles.ctaContainer}>
-        <p style={styles.ctaText}>
-          Ready to create your own success story?
-        </p>
-        <button 
-          style={styles.ctaButton}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = '#2563eb';
-            e.currentTarget.style.transform = 'translateY(-2px)';
-            e.currentTarget.style.boxShadow = '0 6px 20px rgba(37, 99, 235, 0.4)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = '#3b82f6';
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = '0 4px 16px rgba(59, 130, 246, 0.3)';
-          }}
-        >
-          Schedule a Demo
-        </button>
-      </div>
     </section>
   );
 }
 
 const styles = {
   section: {
-    padding: "80px 20px",
-    backgroundColor: "#f8fafc",
+    backgroundColor: "#210635",
     fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    padding: "80px 20px", 
+    minHeight: "100vh",
     '@media (max-width: 1199px)': {
       padding: "60px 16px",
     },
@@ -169,7 +147,7 @@ const styles = {
   },
   header: {
     textAlign: "center",
-    marginBottom: "60px",
+    marginBottom: "30px",
     '@media (max-width: 1199px)': {
       marginBottom: "48px",
     },
@@ -180,13 +158,13 @@ const styles = {
   badge: {
     display: "inline-block",
     padding: "8px 16px",
-    backgroundColor: "rgba(59, 130, 246, 0.1)",
-    color: "#3b82f6",
+    backgroundColor: "rgba(123, 51, 126, 0.2)", 
+    color: "#F5D5E0", 
     borderRadius: "20px",
-    fontSize: "0.875rem",
+    fontSize: "0.85rem",
     fontWeight: "600",
     marginBottom: "16px",
-    letterSpacing: "0.5px",
+    border: "1px solid rgba(245, 213, 224, 0.2)",
     '@media (max-width: 1199px)': {
       padding: "6px 14px",
       fontSize: "0.8125rem",
@@ -199,11 +177,11 @@ const styles = {
     },
   },
   title: {
-    fontSize: "clamp(2rem, 4vw, 2.5rem)",
-    fontWeight: "700",
-    color: "#1e293b",
+    fontSize: "clamp(2.5rem, 5vw, 3.5rem)",
+    fontWeight: "800",
+    color: "#F5D5E0", 
     marginBottom: "16px",
-    lineHeight: "1.2",
+    letterSpacing: "-0.03em",
     '@media (max-width: 1199px)': {
       fontSize: "clamp(1.75rem, 4vw, 2.25rem)",
       marginBottom: "14px",
@@ -216,10 +194,11 @@ const styles = {
   },
   subtitle: {
     fontSize: "1.125rem",
-    color: "#64748b",
-    maxWidth: "600px",
+    color: "#6667AB", 
+    maxWidth: "650px",
     margin: "0 auto",
     lineHeight: "1.6",
+    opacity: 0.9,
     '@media (max-width: 1199px)': {
       fontSize: "1rem",
       maxWidth: "550px",
@@ -233,11 +212,10 @@ const styles = {
   },
   cardsContainer: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-    gap: "30px",
+    gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+    gap: "32px",
     maxWidth: "1200px",
-    margin: "0 auto 60px",
-    padding: "0 20px",
+    margin: "0 auto 80px",
     '@media (max-width: 1199px)': {
       gap: "24px",
       marginBottom: "48px",
@@ -254,13 +232,16 @@ const styles = {
     },
   },
   card: {
-    backgroundColor: "#ffffff",
-    borderRadius: "16px",
-    padding: "32px",
-    border: "1px solid #e2e8f0",
-    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
     position: "relative",
     overflow: "hidden",
+    backgroundColor: "rgba(66, 13, 75, 0.4)", 
+    backdropFilter: "blur(12px)",
+    WebkitBackdropFilter: "blur(12px)",
+    borderRadius: "24px",
+    padding: "40px",
+    border: "1px solid rgba(245, 213, 224, 0.1)",
+    transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+    cursor: "pointer",
     '@media (max-width: 1199px)': {
       padding: "28px",
       borderRadius: "14px",
@@ -319,7 +300,7 @@ const styles = {
   orgName: {
     fontSize: "1.25rem",
     fontWeight: "600",
-    color: "#1e293b",
+    color: "#F5D4E0",
     marginBottom: "4px",
     lineHeight: "1.3",
     '@media (max-width: 1199px)': {
@@ -331,7 +312,7 @@ const styles = {
   },
   orgType: {
     fontSize: "0.875rem",
-    color: "#64748b",
+    color: "white",
     fontWeight: "500",
     '@media (max-width: 1199px)': {
       fontSize: "0.8125rem",
@@ -351,12 +332,13 @@ const styles = {
   },
   label: {
     display: "block",
-    fontSize: "0.8125rem",
-    fontWeight: "600",
-    color: "#64748b",
+    fontSize: "0.75rem",
+    fontWeight: "700",
+    color: "#7B337E", 
     textTransform: "uppercase",
-    letterSpacing: "0.5px",
-    marginBottom: "8px",
+    letterSpacing: "1.5px",
+    marginBottom: "12px",
+    display: "block",
     '@media (max-width: 1199px)': {
       fontSize: "0.75rem",
       marginBottom: "6px",
@@ -367,10 +349,10 @@ const styles = {
     },
   },
   text: {
-    fontSize: "0.9375rem",
-    color: "#475569",
-    lineHeight: "1.6",
-    margin: "0",
+    fontSize: "1rem",
+    color: "#F5D5E0",
+    opacity: 0.85,
+    lineHeight: "1.7",
     '@media (max-width: 1199px)': {
       fontSize: "0.875rem",
       lineHeight: "1.5",
@@ -380,9 +362,9 @@ const styles = {
     },
   },
   resultContainer: {
-    marginTop: "24px",
+    marginTop: "32px",
     paddingTop: "24px",
-    borderTop: "1px solid #e2e8f0",
+    borderTop: "1px solid rgba(245, 213, 224, 0.1)",
     '@media (max-width: 1199px)': {
       marginTop: "20px",
       paddingTop: "20px",
@@ -413,9 +395,12 @@ const styles = {
     },
   },
   metricValue: {
-    fontSize: "1.5rem",
-    fontWeight: "700",
-    lineHeight: "1",
+    fontSize: "2rem",
+    fontWeight: "800",
+    color: "#F5D5E0",
+    background: "linear-gradient(to right, #F5D5E0, #6667AB)", 
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
     '@media (max-width: 1199px)': {
       fontSize: "1.375rem",
     },
@@ -439,7 +424,7 @@ const styles = {
   },
   resultText: {
     fontSize: "0.9375rem",
-    color: "#1e293b",
+    color: "#6667AB",
     fontWeight: "500",
     margin: "0",
     lineHeight: "1.5",
@@ -469,12 +454,13 @@ const styles = {
   },
   ctaContainer: {
     textAlign: "center",
-    padding: "40px 20px",
-    backgroundColor: "#ffffff",
-    borderRadius: "16px",
-    maxWidth: "600px",
+    padding: "60px 40px",
+    backgroundColor: "rgba(66, 13, 75, 0.6)", 
+    backdropFilter: "blur(10px)",
+    borderRadius: "24px",
+    maxWidth: "700px",
     margin: "0 auto",
-    border: "1px solid #e2e8f0",
+    border: "1px solid rgba(245, 213, 224, 0.15)",
     '@media (max-width: 1199px)': {
       padding: "32px 16px",
       borderRadius: "14px",
@@ -503,16 +489,16 @@ const styles = {
     },
   },
   ctaButton: {
-    backgroundColor: "#3b82f6",
-    color: "white",
+    backgroundColor: "#7B337E", 
+    color: "#F5D5E0",
     border: "none",
-    padding: "14px 32px",
-    fontSize: "1rem",
-    fontWeight: "600",
-    borderRadius: "10px",
+    padding: "16px 40px",
+    fontSize: "1.1rem",
+    fontWeight: "700",
+    borderRadius: "14px",
     cursor: "pointer",
     transition: "all 0.3s ease",
-    boxShadow: "0 4px 16px rgba(59, 130, 246, 0.3)",
+    boxShadow: "0 8px 24px rgba(123, 51, 126, 0.4)",
     '@media (max-width: 1199px)': {
       padding: "12px 28px",
       fontSize: "0.9375rem",

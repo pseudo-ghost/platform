@@ -41,7 +41,7 @@ function Navbar() {
   const handleContactHover = (isHovering) => {
     const contactElement = document.querySelector(`[data-contact="true"]`);
     if (contactElement) {
-      contactElement.style.color = isHovering ? "#006982" : "#002B8C";
+      contactElement.style.color = isHovering ? "#7B337E" : "#210635";
       contactElement.style.transform = isHovering ? "translateY(-1px)" : "translateY(0)";
     }
   };
@@ -108,8 +108,7 @@ function Navbar() {
             onMouseLeave={() => handleContactHover(false)}
             title="contact@luminasystems.edu"
           >
-            <span style={styles.contactIcon}>✉️</span>
-            <span style={styles.contactLabel}>Contact</span>
+            
           </div>
           
           {/* Hamburger Menu Button */}
@@ -147,11 +146,6 @@ function Navbar() {
                 {item.label}
               </div>
             ))}
-            <div style={styles.mobileContactFull}>
-              <div style={styles.contactIcon}>✉️</div>
-              <div style={styles.contactEmail}>contact : luminasystems@gmail.com</div>
-              <div style={styles.contactNote}>(Non-clickable demo for academic assignment)</div>
-            </div>
           </div>
         </div>
       )}
@@ -165,8 +159,8 @@ const styles = {
     alignItems: "center",
     justifyContent: "space-between",
     padding: "20px 5%",
-    backgroundColor: "#FFFFFF",
-    color: "#1f2937",
+    backgroundColor: "#6667AB",
+    color: "#210635",
     position: "fixed",
     top: 0,
     left: 0,
@@ -190,7 +184,7 @@ const styles = {
     margin: 0,
     fontSize: "1.8rem",
     fontWeight: "700",
-    color: "#002B8C",
+    color: "#210635",
     lineHeight: "1.2",
     '@media (max-width: 768px)': {
       fontSize: "1.5rem",
@@ -198,7 +192,7 @@ const styles = {
   },
   logoSubtitle: {
     fontSize: "0.85rem",
-    color: "#006982",
+    color: "#210635",
     fontWeight: "500",
     letterSpacing: "0.5px",
     marginTop: "2px",
@@ -220,7 +214,7 @@ const styles = {
     cursor: "pointer",
     fontWeight: 500,
     transition: "all 0.3s ease",
-    color: "#002B8C",
+    color: "#210635",
     fontSize: "1rem",
     padding: "8px 4px",
     whiteSpace: "nowrap",
@@ -232,7 +226,7 @@ const styles = {
     bottom: -2,
     height: "2px",
     width: "0%",
-    backgroundColor: "#006982",
+    backgroundColor: "#7B337E",
     transition: "width 0.3s ease",
   },
   rightSection: {
@@ -242,7 +236,7 @@ const styles = {
     minWidth: "220px",
   },
   contactText: {
-    color: "#002B8C",
+    color: "#210635",
     fontSize: "0.95rem",
     fontWeight: "500",
     padding: "8px 12px",
@@ -260,24 +254,6 @@ const styles = {
     display: "flex",
     alignItems: "center",
     gap: "20px",
-  },
-  mobileContact: {
-    display: "flex",
-    alignItems: "center",
-    gap: "8px",
-    color: "#002B8C",
-    padding: "8px 12px",
-    borderRadius: "4px",
-    transition: "all 0.3s ease",
-    cursor: "default",
-    backgroundColor: "#f8fafc",
-  },
-  contactIcon: {
-    fontSize: "1.2rem",
-  },
-  contactLabel: {
-    fontSize: "0.9rem",
-    fontWeight: "500",
   },
   hamburger: {
     background: "none",
@@ -332,7 +308,7 @@ const styles = {
     textAlign: "center",
   },
   contactEmail: {
-    color: "#002B8C",
+    color: "#210635",
     fontWeight: "600",
     fontSize: "1rem",
     marginTop: "8px",

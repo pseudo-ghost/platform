@@ -9,6 +9,7 @@ function About() {
 
   return (
     <section style={styles.section}>
+      <style>{missionAnimations}</style>
       {/* MISSION SECTION */}
       <div 
         style={{
@@ -40,14 +41,24 @@ function About() {
         </div>
         <div style={styles.missionVisual}>
           <div style={styles.visualCard}>
-            <div style={styles.visualIcon}>🎯</div>
+            <div 
+            style={styles.visualCardGlow}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            ><div style={styles.visualIcon}>🎯</div>
             <h3 style={styles.visualTitle}>Purpose-Driven Design</h3>
             <p style={styles.visualText}>Every feature addresses real organizational learning challenges</p>
+            </div>
           </div>
           <div style={styles.visualCard}>
-            <div style={styles.visualIcon}>⚙️</div>
+            <div 
+            style={styles.visualCardGlow}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            ><div style={styles.visualIcon}>⚙️</div>
             <h3 style={styles.visualTitle}>Scalable Architecture</h3>
             <p style={styles.visualText}>Grow from 50 to 50,000 users without platform changes</p>
+            </div>
           </div>
         </div>
       </div>
@@ -160,12 +171,12 @@ function About() {
           <button 
             style={styles.primaryButton}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#2563eb';
               e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.backgroundColor = '#6667AB';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#3b82f6';
               e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.backgroundColor = '#6667AB';
             }}
           >
             Schedule Consultation
@@ -173,8 +184,8 @@ function About() {
           <button 
             style={styles.secondaryButton}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#f1f5f9';
-              e.currentTarget.style.borderColor = '#3b82f6';
+              e.currentTarget.style.backgroundColor = '#210635';
+              e.currentTarget.style.borderColor = '#6667AB';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = 'white';
@@ -271,39 +282,61 @@ const approachSteps = [
   }
 ];
 
+const missionAnimations = `
+  @keyframes glowPulse {
+    0% { box-shadow: 0 0 5px rgba(123, 51, 126, 0.2); border-color: rgba(245, 213, 224, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(123, 51, 126, 0.6); border-color: rgba(245, 213, 224, 0.5); }
+    100% { box-shadow: 0 0 5px rgba(123, 51, 126, 0.2); border-color: rgba(245, 213, 224, 0.2); }
+  }
+
+  @keyframes textShimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+`;
+
 // STYLES
 const styles = {
- section: {
-  width: "100%",
-  padding: "60px 0 80px",
-  backgroundColor: "#ffffff",
-  boxSizing: "border-box",
-},
+  section: {
+    width: "100%",
+    padding: "60px 0 80px",
+    background: '#210635', 
+    color: '#F5D5E0',      
+    boxSizing: "border-box",
+  },
 
   // MISSION SECTION
   missionContainer: {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
-    gap: "60px",
     alignItems: "center",
     marginBottom: "100px",
-    padding: "40px 0",
+    maxWidth: '1200px',
+    margin: '0 auto',
+    gap: '40px',
+    padding: '40px',
+    background: 'rgba(102, 103, 171, 0.1)', 
+    backdropFilter: 'blur(15px)',
+    borderRadius: '24px',
+    border: '1px solid rgba(245, 213, 224, 0.2)',
+    animation: 'glowPulse 4s infinite ease-in-out',
   },
   missionText: {
-    paddingRight: "20px",
+    paddingRight: "60px",
   },
   missionTitle: {
     fontSize: "2.5rem",
     fontWeight: "700",
-    color: "#1e293b",
-    marginBottom: "24px",
-    lineHeight: "1.2",
-    letterSpacing: "-0.02em",
+    color: '#F5D5E0', 
+    marginBottom: '20px',
+    animation: 'textShimmer 3s linear infinite',
   },
+
   missionParagraph: {
     fontSize: "1.125rem",
     lineHeight: "1.7",
-    color: "#475569",
+    color: "#F5D5E0", 
+    opacity: 0.8,
     marginBottom: "40px",
   },
   missionStats: {
@@ -314,42 +347,45 @@ const styles = {
   stat: {
     display: "flex",
     flexDirection: "column",
+    alignItems: "flex-start", 
+    flex: "1", 
   },
   statNumber: {
     fontSize: "1.8rem",
     fontWeight: "700",
-    color: "#3b82f6",
-    marginBottom: "8px",
+    color: "#7B337E", 
+    marginBottom: "4px",
   },
   statLabel: {
-    fontSize: "0.9rem",
-    color: "#64748b",
+    fontSize: "0.85rem",
+    color: "#F5D5E0", 
+    opacity: 0.7,      
     fontWeight: "500",
-  },
-  missionVisual: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "20px",
+    lineHeight: "1.2",
+    whiteSpace: "nowrap", 
   },
   visualCard: {
-    backgroundColor: "#f8fafc",
     padding: "30px",
-    borderRadius: "12px",
-    border: "1px solid #e2e8f0",
   },
-  visualIcon: {
-    fontSize: "2rem",
-    marginBottom: "16px",
+  visualCardGlow: {
+    background: 'linear-gradient(145deg, rgba(66, 13, 75, 0.8), rgba(33, 6, 53, 0.8))',
+    boxShadow: 'inset 0 0 15px rgba(123, 51, 126, 0.3)',
+    borderRadius: "16px",
+    padding: "30px",
+    transition: "transform 0.3s ease",
   },
+
   visualTitle: {
     fontSize: "1.25rem",
     fontWeight: "600",
-    color: "#1e293b",
+    color: '#F5D5E0',
     marginBottom: "8px",
   },
+
   visualText: {
     fontSize: "1rem",
-    color: "#64748b",
+    color: "#F5D5E0",
+    opacity: 0.7,
     lineHeight: "1.6",
   },
 
@@ -361,17 +397,15 @@ const styles = {
     textAlign: "center",
     fontSize: "2.25rem",
     fontWeight: "700",
-    color: "#1e293b",
+    color: "#F5D5E0",
     marginBottom: "16px",
-    letterSpacing: "-0.01em",
   },
   sectionSubtitle: {
     textAlign: "center",
     fontSize: "1.125rem",
-    color: "#64748b",
+    color: "#6667AB",
     maxWidth: "600px",
     margin: "0 auto 60px",
-    lineHeight: "1.6",
   },
   valuesGrid: {
     display: "grid",
@@ -379,35 +413,18 @@ const styles = {
     gap: "30px",
   },
   valueCard: {
-    backgroundColor: "#ffffff",
-    padding: "32px",
-    borderRadius: "12px",
-    border: "1px solid #f1f5f9",
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.04)",
-    transition: "transform 0.3s ease, box-shadow 0.3s ease",
-  },
-  valueIconContainer: {
-    width: "56px",
-    height: "56px",
-    borderRadius: "12px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: "20px",
-  },
-  valueIcon: {
-    fontSize: "1.5rem",
-  },
-  valueTitle: {
-    fontSize: "1.25rem",
-    fontWeight: "600",
-    color: "#1e293b",
-    marginBottom: "12px",
+    padding: '30px',
+    background: 'rgba(66, 13, 75, 0.4)', 
+    borderRadius: '20px',
+    textAlign: 'center',
+    transition: 'all 0.3s ease',
+    borderBottom: '4px solid #7B337E', 
   },
   valueDescription: {
     fontSize: "1rem",
     lineHeight: "1.6",
-    color: "#64748b",
+    color: "#F5D5E0",
+    opacity: 0.8,
   },
 
   // DIFFERENTIATOR SECTION
@@ -524,7 +541,7 @@ authorTitle: {  // CHANGED: New separate style for the span tag
   stepNumber: {
     width: "60px",
     height: "60px",
-    backgroundColor: "#3b82f6",
+    backgroundColor: "#F5D5E0",
     color: "white",
     borderRadius: "50%",
     display: "flex",
@@ -557,34 +574,28 @@ authorTitle: {  // CHANGED: New separate style for the span tag
     backgroundColor: "#e2e8f0",
   },
 
-  // CTA SECTION
+ // CTA SECTION
   ctaSection: {
     textAlign: "center",
     padding: "60px 40px",
-    backgroundColor: "#f8fafc",
+    backgroundColor: "rgba(66, 13, 75, 0.4)",
     borderRadius: "16px",
-    border: "1px solid #e2e8f0",
+    border: "1px solid rgba(245, 213, 224, 0.1)",
   },
   ctaTitle: {
     fontSize: "2rem",
     fontWeight: "700",
-    color: "#1e293b",
+    color: "#F5D5E0",
     marginBottom: "16px",
   },
   ctaText: {
-    fontSize: "1.125rem",
-    color: "#64748b",
+    fontSize: "1rem",
+    color: "white",
     maxWidth: "600px",
     margin: "0 auto 32px",
-    lineHeight: "1.6",
-  },
-  ctaButtons: {
-    display: "flex",
-    gap: "16px",
-    justifyContent: "center",
   },
   primaryButton: {
-    backgroundColor: "#3b82f6",
+    backgroundColor: "#7B337E",
     color: "white",
     border: "none",
     padding: "14px 32px",
@@ -595,9 +606,9 @@ authorTitle: {  // CHANGED: New separate style for the span tag
     transition: "all 0.3s ease",
   },
   secondaryButton: {
-    backgroundColor: "white",
-    color: "#475569",
-    border: "1px solid #cbd5e1",
+    backgroundColor: "transparent",
+    color: "#6667AB",
+    border: "1px solid #7B337E",
     padding: "14px 32px",
     fontSize: "1rem",
     fontWeight: "600",
