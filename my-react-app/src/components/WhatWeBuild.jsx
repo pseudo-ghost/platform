@@ -426,7 +426,7 @@ const styles = {
 
   // CAPABILITIES
 capabilitiesSection: {
-  backgroundColor: "#210635", // MOON Deep Navy
+  backgroundColor: "#6667AB", // MOON Deep Navy
   padding: "60px 40px",
   borderTop: "1px solid rgba(245, 213, 224, 0.1)", // Subtle divider
 },
@@ -457,7 +457,7 @@ categoryItem: {
   gap: "12px",
   marginBottom: "14px",
   fontSize: "1rem",
-  color: "#6667AB", // Blue-Purple list items
+  color: "white", // Blue-Purple list items
   lineHeight: "1.5",
 },
 checkIcon: {
