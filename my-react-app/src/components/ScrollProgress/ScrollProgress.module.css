@@ -1,0 +1,17 @@
+
+
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px; /*thickness of the line*/
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+  }
+  
+.progressBar{
+    height:100%;
+    background-color:#fbbf24; /*yellow color*/
+    transition: width 0.2s ease-out;
+  }

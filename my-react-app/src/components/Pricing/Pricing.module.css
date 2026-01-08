@@ -1,0 +1,47 @@
+
+.container{
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+      color: #ffffff;
+      text-align: center;
+      font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+.title{
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #ffb703;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+.glassWrapper{
+      max-width: 1000px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255) 0.03; 
+      backdrop-filter: blur(10px); 
+      -webkit-backdrop-filter: blur(10px); 
+      border-radius: 20px;
+      padding: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      overflow-x: auto
+    }
+    
+.table{
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 8px;
+    }
+    
+.th{
+      padding: 20px;
+      font-size: 1.2rem;
+      color: #ffb703;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+.td{
+      padding: 18px;
+      transition: all 0.3s ease;
+    }
+   

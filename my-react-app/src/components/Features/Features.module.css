@@ -1,0 +1,26 @@
+/* styling for Feature module */
+
+.section{
+    padding: 60px 20px; 
+    text-align: center;
+}
+
+.heading{
+    font-size: 2rem;
+    margin-bottom: 40px; 
+}
+
+.feature_mapping{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature{
+    background-color:#fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1)
+}

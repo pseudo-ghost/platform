@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from './ScrollProgress.module.css';
 
 function ScrollProgress() {
   const [scrollWidth, setScrollWidth] = useState(0);
@@ -27,8 +28,8 @@ function ScrollProgress() {
   }, []);
 
   return (
-    <div style={styles.container}>
-      <div style={{ ...styles.progressBar, width: `${scrollWidth}%` }} />
+    <div className={styles.container}>
+      <div className={'${styles.progressBar} width: `${scrollWidth}%` }'} />
     </div>
   );
 }

@@ -1,19 +1,17 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Features from './components/Features';
-import Team from './components/Team';
-import Footer from './components/Footer';
-import ScrollProgress from './components/ScrollProgress';
-import Pricing from './components/Pricing';
+import Navbar from './components/NavBar/Navbar';
+import Hero from './components/Hero/Hero';
+import Features from './components/Features/Features';
 import WhatWeBuild from './components/WhatWeBuild';
+import About from './components/About/About';
+import Pricing from './components/Pricing/Pricing';
+import Team from './components/Team/Team';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
   return (
     <div>
-      <ScrollProgress />
       <Navbar />
       <Hero />
       <Features />

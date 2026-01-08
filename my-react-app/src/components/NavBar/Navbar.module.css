@@ -1,0 +1,72 @@
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background-color: #0f172a;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+.logo{
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center; /*centers menu between logo and right section*/
+  }
+  
+.menuItem{
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+.underline{
+    position: absolute;
+    content: ' ';
+    left: 0;
+    bottom: -4;
+    height: 3px;
+    width: 0%;
+    background-color: #fbbf24; /* yellow line */
+    transition: width 0.3s ease;
+  }
+  
+.rightSection{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+.searchBar{
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+  }
+
+.ctaButton{
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: none;
+    background-color: #fbbf24;
+    color: #111827;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s all;
+  }
