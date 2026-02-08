@@ -8,6 +8,15 @@ import { GiArtificialIntelligence } from "react-icons/gi";
 import { MdEmail } from "react-icons/md";
 import { IoPin } from "react-icons/io5";
 
+import { FaInstagram, FaLinkedin, FaWrench } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
+import { CiGlobe } from "react-icons/ci";
+import { FaGears } from "react-icons/fa6";
+import { GoGraph } from "react-icons/go";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { MdEmail } from "react-icons/md";
+import { IoPin } from "react-icons/io5";
+
 function Footer() {
   const currentYear = new Date().getFullYear();
   
@@ -24,8 +33,7 @@ function Footer() {
             <h2>LuminaSystems</h2> 
           </div>
           <p style={styles.description}>
-            A technology-driven learning platform that helps students and 
-            professionals develop in-demand skills through modern digital solutions.
+            A technology-driven service platform that helps organizations and companies develop in-demand skills through modern digital solutions.
           </p>
           
           {/* Newsletter Signup */}
@@ -48,16 +56,13 @@ function Footer() {
           <h4 style={styles.heading}>Quick Links</h4>
           <ul style={styles.list} role="list">
             <li style={styles.listItem}>
-              <a href="/about" style={styles.link} aria-label="About SkillForge">About Us</a>
+              <a href="#about" style={styles.link} aria-label="About Us">About Us</a>
             </li>
             <li style={styles.listItem}>
-              <a href="/courses" style={styles.link} aria-label="Explore courses">Explore Courses</a>
+              <a href="#features" style={styles.link} aria-label="Features ">Features</a>
             </li>
             <li style={styles.listItem}>
-              <a href="/pricing" style={styles.link} aria-label="View pricing plans">Pricing</a>
-            </li>
-            <li style={styles.listItem}>
-              <a href="/contact" style={styles.link} aria-label="Contact SkillForge">Contact</a>
+              <a href="#pricing" style={styles.link} aria-label="View pricing plans">Pricing</a>
             </li>
           </ul>
         </div>
@@ -163,7 +168,7 @@ function Footer() {
 
 const styles = {
   footer: {
-    backgroundColor: "#0f172a",
+    backgroundColor: "#210635",
     color: "#e5e7eb",
     padding: "0",
     marginTop: "clamp(3rem, 6vw, 6rem)",
@@ -394,7 +399,7 @@ const styles = {
   
   // Bottom section
   bottomContainer: {
-    borderTop: "1px solid #334155",
+    borderTop: "1px solid #210635",
     padding: "clamp(1.5rem, 3vw, 2rem) clamp(1.5rem, 4vw, 2rem)",
     backgroundColor: "rgba(15, 23, 42, 0.9)",
   },

@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { MdLoop } from "react-icons/md";
+import { BsFileBarGraph } from "react-icons/bs";
+import { FaRegHandshake, FaShieldAlt } from "react-icons/fa";
+import { FiTarget } from "react-icons/fi";
+import { CiSettings } from "react-icons/ci";
 
 function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,7 +13,7 @@ function About() {
   }, []);
 
   return (
-    <section style={styles.section}>
+    <section id="about" style={styles.section}>
       <style>{missionAnimations}</style>
       {/* MISSION SECTION */}
       <div 
@@ -45,7 +50,7 @@ function About() {
             style={styles.visualCardGlow}
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-            ><div style={styles.visualIcon}>🎯</div>
+            ><div style={styles.visualIcon}><FiTarget></FiTarget></div>
             <h3 style={styles.visualTitle}>Purpose-Driven Design</h3>
             <p style={styles.visualText}>Every feature addresses real organizational learning challenges</p>
             </div>
@@ -55,7 +60,7 @@ function About() {
             style={styles.visualCardGlow}
             onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-            ><div style={styles.visualIcon}>⚙️</div>
+            ><div style={styles.visualIcon}><CiSettings></CiSettings></div>
             <h3 style={styles.visualTitle}>Scalable Architecture</h3>
             <p style={styles.visualText}>Grow from 50 to 50,000 users without platform changes</p>
             </div>
@@ -181,19 +186,6 @@ function About() {
           >
             Schedule Consultation
           </button>
-          <button 
-            style={styles.secondaryButton}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#210635';
-              e.currentTarget.style.borderColor = '#6667AB';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'white';
-              e.currentTarget.style.borderColor = '#cbd5e1';
-            }}
-          >
-            View Case Studies
-          </button>
         </div>
       </div>
     </section>
@@ -208,7 +200,7 @@ const valuesData = [
     description: "We build platforms that evolve with your organization's changing needs, avoiding rigid solutions that become obsolete.",
     color: "#3b82f6",
     bgColor: "rgba(59, 130, 246, 0.08)",
-    icon: "🔄"
+    icon: <MdLoop></MdLoop>
   },
   {
     id: 2,
@@ -216,7 +208,7 @@ const valuesData = [
     description: "Every feature is grounded in learning science and usability research, ensuring effectiveness and adoption.",
     color: "#10b981",
     bgColor: "rgba(16, 185, 129, 0.08)",
-    icon: "📊"
+    icon: <BsFileBarGraph></BsFileBarGraph>
   },
   {
     id: 3,
@@ -224,7 +216,7 @@ const valuesData = [
     description: "We see ourselves as long-term partners in your success, not just software vendors.",
     color: "#8b5cf6",
     bgColor: "rgba(139, 92, 246, 0.08)",
-    icon: "🤝"
+    icon: <FaRegHandshake></FaRegHandshake>
   },
   {
     id: 4,
@@ -232,7 +224,7 @@ const valuesData = [
     description: "Built with the security, scalability, and support that organizations require for mission-critical training.",
     color: "#f59e0b",
     bgColor: "rgba(245, 158, 11, 0.08)",
-    icon: "🛡️"
+    icon: <FaShieldAlt></FaShieldAlt>
   }
 ];
 
@@ -427,23 +419,24 @@ const styles = {
     opacity: 0.8,
   },
 
-  // DIFFERENTIATOR SECTION
+// DIFFERENTIATOR SECTION
 differentiatorSection: {
   display: "grid",
   gridTemplateColumns: "1fr 1fr",
   gap: "60px",
-  backgroundColor: "#f8fafc",
+  backgroundColor: "rgba(102, 103, 171, 0.05)", 
   padding: "60px",
-  borderRadius: "16px",
+  border: "1px solid rgba(245, 213, 224, 0.1)", 
   marginBottom: "100px",
+  backdropFilter: "blur(10px)", 
 },
 differentiatorContent: {
   paddingRight: "20px",
 },
 differentiatorTitle: {
-  fontSize: "2rem",
+  fontSize: "2.25rem",
   fontWeight: "700",
-  color: "#1e293b",
+  color: "#F5D5E0", 
   marginBottom: "32px",
 },
 differentiatorList: {
@@ -458,8 +451,8 @@ differentiatorItem: {
 differentiatorCheck: {
   width: "24px",
   height: "24px",
-  backgroundColor: "#10b981",
-  color: "white",
+  backgroundColor: "#7B337E",
+  color: "#F5D5E0",
   borderRadius: "50%",
   display: "flex",
   alignItems: "center",
@@ -467,16 +460,17 @@ differentiatorCheck: {
   fontSize: "14px",
   flexShrink: "0",
   marginTop: "2px",
+  boxShadow: "0 0 10px rgba(123, 51, 126, 0.5)", 
 },
 differentiatorItemTitle: {
   fontSize: "1.125rem",
   fontWeight: "600",
-  color: "#1e293b",
+  color: "#F5D5E0", 
   marginBottom: "4px",
 },
 differentiatorItemText: {
   fontSize: "1rem",
-  color: "#64748b",
+  color: "#6667AB", 
   lineHeight: "1.6",
 },
 differentiatorVisual: {
@@ -484,15 +478,15 @@ differentiatorVisual: {
   alignItems: "center",
 },
 differentiatorQuote: {
-  backgroundColor: "#ffffff",
+  backgroundColor: "rgba(66, 13, 75, 0.4)",
   padding: "40px",
-  borderRadius: "12px",
-  borderLeft: "4px solid #3b82f6",
-  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.06)",
+  borderRadius: "20px",
+  borderLeft: "4px solid #7B337E",
+  boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
 },
 quoteMark: {
   fontSize: "3rem",
-  color: "#cbd5e1",
+  color: "rgba(102, 103, 171, 0.3)",
   fontFamily: "Georgia, serif",
   lineHeight: "1",
   marginBottom: "16px",
@@ -500,9 +494,10 @@ quoteMark: {
 quoteText: {
   fontSize: "1.125rem",
   lineHeight: "1.7",
-  color: "#475569",
+  color: "#F5D5E0", 
   marginBottom: "24px",
   fontStyle: "italic",
+  opacity: 0.9,
 },
 quoteAuthor: {
   display: "flex",
@@ -512,110 +507,113 @@ authorDetails: {
   display: "flex",
   flexDirection: "column",
 },
-authorName: {  // CHANGED: New separate style for the strong tag
-  color: "#1e293b",
+authorName: {  
   fontSize: "1rem",
   marginBottom: "4px",
   fontWeight: "600",
+  color: "#F5D5E0", 
 },
-authorTitle: {  // CHANGED: New separate style for the span tag
-  color: "#64748b",
-  fontSize: "0.9rem",
+authorTitle: {  
+  color: "#6667AB", 
 },
 
-  // APPROACH SECTION
-  approachSection: {
-    marginBottom: "100px",
-  },
-  timeline: {
-    maxWidth: "800px",
-    margin: "0 auto",
-    position: "relative",
-  },
-  timelineStep: {
-    display: "flex",
-    gap: "24px",
-    marginBottom: "40px",
-    position: "relative",
-  },
-  stepNumber: {
-    width: "60px",
-    height: "60px",
-    backgroundColor: "#F5D5E0",
-    color: "white",
-    borderRadius: "50%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontSize: "1.25rem",
-    fontWeight: "600",
-    flexShrink: "0",
-  },
-  stepContent: {
-    paddingTop: "12px",
-  },
-  stepTitle: {
-    fontSize: "1.25rem",
-    fontWeight: "600",
-    color: "#1e293b",
-    marginBottom: "8px",
-  },
-  stepDescription: {
-    fontSize: "1rem",
-    lineHeight: "1.6",
-    color: "#64748b",
-  },
-  timelineConnector: {
-    position: "absolute",
-    left: "30px",
-    top: "60px",
-    bottom: "-40px",
-    width: "2px",
-    backgroundColor: "#e2e8f0",
-  },
+// APPROACH SECTION
+approachSection: {
+  marginBottom: "10px",
+},
+timeline: {
+  maxWidth: "800px",
+  margin: "0 auto",
+  position: "relative",
+},
+timelineStep: {
+  display: "flex",
+  gap: "24px",
+  marginBottom: "60px", 
+  position: "relative",
+  zIndex: 1,
+},
+stepNumber: {
+  width: "60px",
+  height: "60px",
+  backgroundColor: "#7B337E", 
+  color: "#F5D5E0", 
+  borderRadius: "50%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontSize: "1.5rem",
+  fontWeight: "700",
+  flexShrink: "0",
+  boxShadow: "0 0 15px rgba(123, 51, 126, 0.4)", 
+  border: "2px solid rgba(245, 213, 224, 0.2)",
+},
+stepContent: {
+  paddingTop: "12px",
+},
+stepTitle: {
+  fontSize: "1.5rem",
+  fontWeight: "700",
+  color: "#F5D5E0", 
+  marginBottom: "12px",
+},
+stepDescription: {
+  fontSize: "1.05rem",
+  lineHeight: "1.7",
+  color: "#6667AB", 
+  maxWidth: "600px",
+},
+timelineConnector: {
+  position: "absolute",
+  left: "30px",
+  top: "70px",
+  bottom: "-50px",
+  width: "2px",
+  background: "linear-gradient(to bottom, #7B337E, rgba(102, 103, 171, 0.2))", 
+  zIndex: 0,
+},
 
- // CTA SECTION
-  ctaSection: {
-    textAlign: "center",
-    padding: "60px 40px",
-    backgroundColor: "rgba(66, 13, 75, 0.4)",
-    borderRadius: "16px",
-    border: "1px solid rgba(245, 213, 224, 0.1)",
-  },
-  ctaTitle: {
-    fontSize: "2rem",
-    fontWeight: "700",
-    color: "#F5D5E0",
-    marginBottom: "16px",
-  },
-  ctaText: {
-    fontSize: "1rem",
-    color: "white",
-    maxWidth: "600px",
-    margin: "0 auto 32px",
-  },
-  primaryButton: {
-    backgroundColor: "#7B337E",
-    color: "white",
-    border: "none",
-    padding: "14px 32px",
-    fontSize: "1rem",
-    fontWeight: "600",
-    borderRadius: "8px",
-    cursor: "pointer",
-    transition: "all 0.3s ease",
-  },
-  secondaryButton: {
-    backgroundColor: "transparent",
-    color: "#6667AB",
-    border: "1px solid #7B337E",
-    padding: "14px 32px",
-    fontSize: "1rem",
-    fontWeight: "600",
-    borderRadius: "8px",
-    cursor: "pointer",
-    transition: "all 0.3s ease",
-  },
+// CTA SECTION
+ctaSection: {
+  textAlign: "center",
+  padding: "60px 40px",
+  backgroundColor: "rgba(66, 13, 75, 0.4)",
+  border: "1px solid rgba(245, 213, 224, 0.1)",
+},
+ctaTitle: {
+  fontSize: "2rem",
+  fontWeight: "700",
+  color: "#F5D5E0",
+  marginBottom: "16px",
+},
+ctaText: {
+  fontSize: "1rem",
+  color: "white",
+  maxWidth: "600px",
+  margin: "0 auto 32px",
+},
+primaryButton: {
+  backgroundColor: "#7B337E",
+  color: "white",
+  border: "none",
+  padding: "14px 32px",
+  fontSize: "1rem",
+  fontWeight: "600",
+  borderRadius: "8px",
+  cursor: "pointer",
+  transition: "all 0.3s ease",
+},
+secondaryButton: {
+  backgroundColor: "transparent",
+  color: "#6667AB",
+  border: "1px solid #7B337E",
+  padding: "14px 32px",
+  fontSize: "1rem",
+  fontWeight: "600",
+  borderRadius: "8px",
+  cursor: "pointer",
+  transition: "all 0.3s ease",
+},
 };
 
 export default About;

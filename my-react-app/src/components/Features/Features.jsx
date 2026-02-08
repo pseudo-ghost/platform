@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { TbHealthRecognition } from "react-icons/tb";
+import { FaBuilding,  FaPlusCircle } from "react-icons/fa";
+
 
 function Features() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -14,7 +17,7 @@ function Features() {
       metric: "60%",
       metricLabel: "Time Saved",
       color: "#3b82f6",
-      icon: "🏥"
+      icon: <TbHealthRecognition></TbHealthRecognition>
     },
     {
       id: 2,
@@ -26,7 +29,7 @@ function Features() {
       metric: "6x",
       metricLabel: "Growth",
       color: "#f59e0b",
-      icon: "🎓"
+      icon: <FaBuilding></FaBuilding>
     },
     {
       id: 3,
@@ -38,12 +41,12 @@ function Features() {
       metric: "2 weeks",
       metricLabel: "Faster",
       color: "#10b981",
-      icon: "🏭"
+      icon: <FaPlusCircle></FaPlusCircle>
     },
   ];
 
   return (
-    <section style={styles.section}>
+    <section id="features" style={styles.section}>
       {/* Section Header */}
       <div style={styles.header}>
         <h2 style={styles.title}>How Organizations Use LuminaSystems</h2>
@@ -194,7 +197,7 @@ const styles = {
   },
   subtitle: {
     fontSize: "1.125rem",
-    color: "#6667AB", 
+    color: "white", 
     maxWidth: "650px",
     margin: "0 auto",
     lineHeight: "1.6",
@@ -424,7 +427,7 @@ const styles = {
   },
   resultText: {
     fontSize: "0.9375rem",
-    color: "#6667AB",
+    color: "white",
     fontWeight: "500",
     margin: "0",
     lineHeight: "1.5",
