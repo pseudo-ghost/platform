@@ -20,8 +20,8 @@ function Footer() {
         {/* Company Info - Wider column for description */}
         <div style={styles.column}>
           <div style={styles.logoContainer}>
-            <span style={styles.logoIcon}><FaWrench></FaWrench></span>
-            <h2 style={styles.logo}>SkillForge</h2>
+            <span style={styles.logoIcon}>🎓</span>
+            <h2>LuminaSystems</h2> 
           </div>
           <p style={styles.description}>
             A technology-driven learning platform that helps students and 
@@ -88,11 +88,11 @@ function Footer() {
             <div style={styles.contactItem}>
               <span style={styles.contactIcon}><MdEmail></MdEmail></span>
               <a 
-                href="mailto:info@skillforge.com" 
+                href="mailto:info@luminasystems.com" 
                 style={styles.contactLink}
-                aria-label="Email SkillForge at info@skillforge.com"
+                aria-label="Email LuminaSystems at info@luminasystems.com"
               >
-                info@skillforge.com
+                info@luminasystems.com
               </a>
             </div>
             <div style={styles.contactItem}>
@@ -106,33 +106,33 @@ function Footer() {
             <p style={styles.socialHeading}>Follow Us</p>
             <div style={styles.socials} role="list">
               <a 
-                href="https://skillforge.com" 
+                href="https://luminasystems.com" 
                 style={styles.socialLink}
-                aria-label="Visit SkillForge website"
+                aria-label="Visit LuminaSystems website"
               >
                 <span style={styles.socialIcon}><CiGlobe></CiGlobe></span>
                 <span style={styles.socialLabel}>Website</span>
               </a>
               <a 
-                href="https://twitter.com/skillforge" 
+                href="https://twitter.com/luminasystems" 
                 style={styles.socialLink}
-                aria-label="Follow SkillForge on Twitter"
+                aria-label="Follow LuminaSystems on Twitter"
               >
                 <span style={styles.socialIcon}><RiTwitterXFill></RiTwitterXFill></span>
                 <span style={styles.socialLabel}>Twitter</span>
               </a>
               <a 
-                href="https://instagram.com/skillforge" 
+                href="https://instagram.com/luminasystems" 
                 style={styles.socialLink}
-                aria-label="Follow SkillForge on Instagram"
+                aria-label="Follow LuminaSystemsLuminaSystems on Instagram"
               >
                 <span style={styles.socialIcon}><FaInstagram></FaInstagram></span>
                 <span style={styles.socialLabel}>Instagram</span>
               </a>
               <a 
-                href="https://linkedin.com/company/skillforge" 
+                href="https://linkedin.com/company/luminasystems" 
                 style={styles.socialLink}
-                aria-label="Follow SkillForge on LinkedIn"
+                aria-label="Follow LuminaSystems on LinkedIn"
               >
                 <span style={styles.socialIcon}><FaLinkedin></FaLinkedin></span>
                 <span style={styles.socialLabel}>LinkedIn</span>
@@ -146,7 +146,7 @@ function Footer() {
       <div style={styles.bottomContainer}>
         <div style={styles.bottomContent}>
           <div style={styles.copyright}>
-            © {currentYear} SkillForge. All rights reserved.
+            © {currentYear} LuminaSystems. All rights reserved.
           </div>
           <div style={styles.bottomLinks}>
             <a href="/privacy" style={styles.bottomLink} aria-label="Privacy Policy">Privacy Policy</a>

@@ -84,8 +84,6 @@ function HomePage() {
                 transform: isVisible ? 'translateY(0)' : 'translateY(10px)',
               }}
             >
-              <span className="badge-icon">🏢</span>
-              <span className="badge-text">Enterprise Learning Platform</span>
             </div>
 
             {/* Main Headline */}
@@ -96,7 +94,7 @@ function HomePage() {
 
             {/* Value Proposition */}
             <p className="hero-subtitle">
-              A flexible learning management system that grows with your organization—from 50 to 5,000 employees. Deploy in weeks, not months.
+              A flexible learning management system that grows with your organization from 50 to 5,000 employees. Deploy in weeks, not months.
             </p>
 
             {/* Key Metrics */}
@@ -188,7 +186,7 @@ function HomePage() {
                     style={{
                       opacity: isVisible ? 1 : 0,
                       transform: isVisible ? 'translateY(0)' : 'translateY(10px)',
-                      transitionDelay: `${0.4 + index * 0.05}s`
+                      transitionDelay: `${0.1 + index * 0.05}s`
                     }}
                     aria-label={`${industry.label} sector`}
                   >

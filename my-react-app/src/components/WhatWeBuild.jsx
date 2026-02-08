@@ -91,62 +91,6 @@ function WhatWeBuild() {
         </div>
       </div>
 
-      {/* DEVELOPMENT PROCESS */}
-      <div style={styles.processSection}>
-        <h2 style={styles.sectionTitle}>Our Development Process</h2>
-        <p style={styles.sectionSubtitle}>
-          A structured partnership approach ensuring alignment, quality, and timely delivery
-        </p>
-        
-        <div style={styles.processTimeline}>
-          {processSteps.map((step, index) => (
-            <div key={step.id} style={styles.processStep}>
-              <div style={styles.stepNumberContainer}>
-                <div style={styles.stepNumber}>{step.number}</div>
-                {index < processSteps.length - 1 && (
-                  <div style={styles.stepConnector}></div>
-                )}
-              </div>
-              <div style={styles.stepContent}>
-                <h3 style={styles.stepTitle}>{step.title}</h3>
-                <p style={styles.stepDescription}>{step.description}</p>
-                <div style={styles.stepDuration}>
-                  <span style={styles.durationLabel}>Duration: </span>
-                  {step.duration}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* DIFFERENTIATORS */}
-      <div 
-        style={{
-          ...styles.differentiatorsSection,
-          opacity: isVisible ? 1 : 0,
-          transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-          transition: 'opacity 0.8s ease 0.6s, transform 0.8s ease 0.6s'
-        }}
-      >
-        <h2 style={styles.sectionTitle}>What Sets Our Platforms Apart</h2>
-        <p style={styles.sectionSubtitle}>
-          Beyond technology — our approach to partnership and platform design
-        </p>
-        
-        <div style={styles.differentiatorsGrid}>
-          {differentiatorsData.map((item, index) => (
-            <div key={item.id} style={styles.differentiatorCard}>
-              <div style={{...styles.differentiatorIcon, backgroundColor: item.bgColor}}>
-                {item.icon}
-              </div>
-              <h3 style={styles.differentiatorTitle}>{item.title}</h3>
-              <p style={styles.differentiatorDescription}>{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* PROJECT EXAMPLES */}
       <div style={styles.examplesSection}>
         <h2 style={styles.sectionTitle}>Platform Examples</h2>
@@ -183,50 +127,6 @@ function WhatWeBuild() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* CTA SECTION */}
-      <div 
-        style={{
-          ...styles.ctaSection,
-          opacity: isVisible ? 1 : 0,
-          transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-          transition: 'opacity 0.8s ease 0.9s, transform 0.8s ease 0.9s'
-        }}
-      >
-        <h3 style={styles.ctaTitle}>Ready to Build Your Learning Platform?</h3>
-        <p style={styles.ctaText}>
-          Let's discuss your specific requirements and explore how we can create a solution 
-          that meets your organizational learning objectives.
-        </p>
-        <div style={styles.ctaButtons}>
-          <button 
-            style={styles.primaryButton}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#2563eb';
-              e.currentTarget.style.transform = 'translateY(-2px)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#3b82f6';
-              e.currentTarget.style.transform = 'translateY(0)';
-            }}
-          >
-            Schedule Technical Consultation
-          </button>
-          <button 
-            style={styles.secondaryButton}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#f1f5f9';
-              e.currentTarget.style.borderColor = '#3b82f6';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'white';
-              e.currentTarget.style.borderColor = '#cbd5e1';
-            }}
-          >
-            Download Capabilities PDF
-          </button>
         </div>
       </div>
     </section>
